@@ -456,6 +456,110 @@
       font-size: .78rem;
     }
 
+    /* ── RESULTS SECTION ─────────────────────────────────── */
+    #results-section {
+      display: none;
+      background: var(--cream);
+      border-top: 3px solid var(--navy);
+      padding: 48px 24px 56px;
+    }
+    #results-section .results-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    #results-section h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.6rem;
+      color: var(--navy-dark);
+      margin-bottom: 6px;
+    }
+    #results-section .results-meta {
+      color: var(--muted);
+      font-size: .88rem;
+      margin-bottom: 28px;
+    }
+    .translation-card {
+      background: #fff;
+      border: 1px solid #e0e4ea;
+      border-radius: 12px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow .18s, border-color .18s, transform .15s;
+    }
+    .translation-card:hover {
+      border-color: var(--navy);
+      box-shadow: 0 4px 18px rgba(26,58,92,.10);
+      transform: translateY(-2px);
+      color: inherit;
+    }
+    .translation-card .tc-titles { flex: 1; min-width: 0; }
+    .translation-card .tc-vernacular {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--navy-dark);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .translation-card .tc-english {
+      font-size: .82rem;
+      color: var(--muted);
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .badge-free {
+      background: #e6f4ea;
+      color: #1a7a35;
+      font-size: .72rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 20px;
+      white-space: nowrap;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+    .badge-restricted {
+      background: #fef3e2;
+      color: #a05800;
+      font-size: .72rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 20px;
+      white-space: nowrap;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+    .tc-arrow {
+      color: var(--navy);
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .results-browse-all {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 24px;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: .9rem;
+      text-decoration: none;
+    }
+    .results-browse-all:hover { text-decoration: underline; color: var(--navy); }
+    .results-none {
+      color: var(--muted);
+      font-size: .97rem;
+      padding: 24px 0;
+    }
+
     /* ── PROTOTYPE BANNER ────────────────────────────────── */
     .proto-banner {
       background: #fffbe6;
@@ -563,6 +667,18 @@
       </div>
       <p class="finder-note">Over 1,600 translations in 1,000+ languages. Can't find yours? <a href="https://ebible.org/find/">Browse all translations.</a></p>
     </div>
+  </div>
+</section>
+
+<!-- RESULTS SECTION (shown after language selection) -->
+<section id="results-section">
+  <div class="results-wrap">
+    <h2 id="results-title"></h2>
+    <p class="results-meta" id="results-meta"></p>
+    <div id="results-list" class="d-flex flex-column gap-3"></div>
+    <a id="results-browse-all" class="results-browse-all" href="https://ebible.org/find/" target="_blank">
+      Browse all translations on eBible.org <i class="bi bi-arrow-right"></i>
+    </a>
   </div>
 </section>
 
@@ -729,27 +845,81 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Hamburger menu
+  // ── Hamburger menu ──────────────────────────────────────
   document.getElementById('hamburger').addEventListener('click', function () {
     const nav = document.getElementById('nav-links');
     const open = nav.classList.toggle('open');
     this.setAttribute('aria-expanded', open);
   });
 
-  // Language selector "Go" button
-  function goToLang() {
-    const sel = document.getElementById('lang-select');
-    if (sel.value) {
-      window.location.href = sel.value;
-    } else {
-      sel.focus();
-    }
+  // ── Translation data ────────────────────────────────────
+  let translationData = null;
+
+  async function loadTranslations() {
+    if (translationData) return translationData;
+    const resp = await fetch('translations.json');
+    translationData = await resp.json();
+    return translationData;
   }
 
-  // Also go on Enter key
+  // ── Language selector ───────────────────────────────────
+  async function goToLang() {
+    const sel = document.getElementById('lang-select');
+    const langKey = sel.options[sel.selectedIndex].text.split(' — ')[0].trim();
+    if (!sel.value) { sel.focus(); return; }
+
+    const data = await loadTranslations();
+    const translations = data[langKey] || [];
+    showResults(langKey, translations);
+  }
+
   document.getElementById('lang-select').addEventListener('keydown', function (e) {
     if (e.key === 'Enter') goToLang();
   });
+
+  // ── Render results ──────────────────────────────────────
+  function showResults(langKey, translations) {
+    const section   = document.getElementById('results-section');
+    const title     = document.getElementById('results-title');
+    const meta      = document.getElementById('results-meta');
+    const list      = document.getElementById('results-list');
+    const browseAll = document.getElementById('results-browse-all');
+
+    const freeCount = translations.filter(t => t.f).length;
+
+    title.textContent = langKey + ' Bible Translations';
+
+    if (translations.length === 0) {
+      meta.textContent = '';
+      list.innerHTML = '<p class="results-none">No translations found for this language. Try browsing all translations on eBible.org.</p>';
+    } else {
+      meta.textContent =
+        translations.length + ' translation' + (translations.length !== 1 ? 's' : '') +
+        (freeCount > 0 ? ' — ' + freeCount + ' freely redistributable' : '');
+
+      list.innerHTML = translations.map(t => {
+        const vernTitle = t.tv || t.lv || '';
+        const engTitle  = t.te !== vernTitle ? t.te : '';
+        const badge     = t.f
+          ? '<span class="badge-free">Free</span>'
+          : '<span class="badge-restricted">Copyright</span>';
+        return `
+          <a class="translation-card" href="https://ebible.org/details.php?id=${t.id}" target="_blank">
+            <div class="tc-titles">
+              <div class="tc-vernacular">${vernTitle}</div>
+              ${engTitle ? `<div class="tc-english">${engTitle}</div>` : ''}
+            </div>
+            ${badge}
+            <i class="bi bi-arrow-right tc-arrow"></i>
+          </a>`;
+      }).join('');
+    }
+
+    browseAll.href = 'https://ebible.org/find/';
+
+    section.style.display = 'block';
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
 </script>
 </body>
 </html>
