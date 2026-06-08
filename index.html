@@ -619,43 +619,43 @@
         <select id="lang-select" aria-label="Select your language">
           <option value="">— Choose a language —</option>
           <optgroup label="Most widely spoken">
-            <option value="https://ebible.org/find/?lang=eng">English</option>
-            <option value="https://ebible.org/find/?lang=zho">中文 — Chinese (Mandarin)</option>
-            <option value="https://ebible.org/find/?lang=hin">हिन्दी — Hindi</option>
-            <option value="https://ebible.org/find/?lang=spa">Español — Spanish</option>
-            <option value="https://ebible.org/find/?lang=fra">Français — French</option>
-            <option value="https://ebible.org/find/?lang=ara">العربية — Arabic</option>
-            <option value="https://ebible.org/find/?lang=ben">বাংলা — Bengali</option>
-            <option value="https://ebible.org/find/?lang=por">Português — Portuguese</option>
-            <option value="https://ebible.org/find/?lang=rus">Русский — Russian</option>
-            <option value="https://ebible.org/find/?lang=urd">اردو — Urdu</option>
-            <option value="https://ebible.org/find/?lang=ind">Bahasa Indonesia — Indonesian</option>
-            <option value="https://ebible.org/find/?lang=deu">Deutsch — German</option>
-            <option value="https://ebible.org/find/?lang=jpn">日本語 — Japanese</option>
-            <option value="https://ebible.org/find/?lang=mar">मराठी — Marathi</option>
-            <option value="https://ebible.org/find/?lang=tel">తెలుగు — Telugu</option>
-            <option value="https://ebible.org/find/?lang=tur">Türkçe — Turkish</option>
-            <option value="https://ebible.org/find/?lang=tam">தமிழ் — Tamil</option>
-            <option value="https://ebible.org/find/?lang=vie">Tiếng Việt — Vietnamese</option>
-            <option value="https://ebible.org/find/?lang=kor">한국어 — Korean</option>
-            <option value="https://ebible.org/find/?lang=swh">Kiswahili — Swahili</option>
+            <option value="show" data-lang="English">English</option>
+            <option value="show" data-lang="Chinese">中文 — Chinese (Mandarin)</option>
+            <option value="show" data-lang="Hindi">हिन्दी — Hindi</option>
+            <option value="show" data-lang="Spanish">Español — Spanish</option>
+            <option value="show" data-lang="French">Français — French</option>
+            <option value="show" data-lang="Arabic">العربية — Arabic</option>
+            <option value="show" data-lang="Bengali">বাংলা — Bengali</option>
+            <option value="show" data-lang="Portuguese">Português — Portuguese</option>
+            <option value="show" data-lang="Russian">Русский — Russian</option>
+            <option value="show" data-lang="Urdu">اردو — Urdu</option>
+            <option value="show" data-lang="Indonesian">Bahasa Indonesia — Indonesian</option>
+            <option value="show" data-lang="German">Deutsch — German</option>
+            <option value="show" data-lang="Japanese">日本語 — Japanese</option>
+            <option value="show" data-lang="Marathi">मराठी — Marathi</option>
+            <option value="show" data-lang="Telugu">తెలుగు — Telugu</option>
+            <option value="show" data-lang="Turkish">Türkçe — Turkish</option>
+            <option value="show" data-lang="Tamil">தமிழ் — Tamil</option>
+            <option value="show" data-lang="Vietnamese">Tiếng Việt — Vietnamese</option>
+            <option value="show" data-lang="Korean">한국어 — Korean</option>
+            <option value="show" data-lang="Swahili">Kiswahili — Swahili</option>
           </optgroup>
           <optgroup label="Pacific &amp; Southeast Asia">
-            <option value="https://ebible.org/find/?lang=tdt">Tetun — Timor-Leste</option>
-            <option value="https://ebible.org/find/?lang=tpi">Tok Pisin — Papua New Guinea</option>
-            <option value="https://ebible.org/find/?lang=ilo">Ilocano — Philippines</option>
-            <option value="https://ebible.org/find/?lang=ceb">Cebuano — Philippines</option>
-            <option value="https://ebible.org/find/?lang=tha">ภาษาไทย — Thai</option>
-            <option value="https://ebible.org/find/?lang=khm">ភាសាខ្មែរ — Khmer</option>
+            <option value="show" data-lang="Tetun">Tetun — Timor-Leste</option>
+            <option value="show" data-lang="Tok Pisin">Tok Pisin — Papua New Guinea</option>
+            <option value="show" data-lang="Ilocano">Ilocano — Philippines</option>
+            <option value="show" data-lang="Cebuano">Cebuano — Philippines</option>
+            <option value="show" data-lang="Thai">ภาษาไทย — Thai</option>
+            <option value="show" data-lang="Khmer">ភាសាខ្មែរ — Khmer</option>
           </optgroup>
           <optgroup label="Africa">
-            <option value="https://ebible.org/find/?lang=hau">Hausa</option>
-            <option value="https://ebible.org/find/?lang=yor">Yoruba</option>
-            <option value="https://ebible.org/find/?lang=ibo">Igbo</option>
-            <option value="https://ebible.org/find/?lang=amh">አማርኛ — Amharic</option>
-            <option value="https://ebible.org/find/?lang=orm">Afaan Oromoo</option>
-            <option value="https://ebible.org/find/?lang=som">Soomaali — Somali</option>
-            <option value="https://ebible.org/find/?lang=mlg">Malagasy</option>
+            <option value="show" data-lang="Hausa">Hausa</option>
+            <option value="show" data-lang="Yoruba">Yoruba</option>
+            <option value="show" data-lang="Igbo">Igbo</option>
+            <option value="show" data-lang="Amharic">አማርኛ — Amharic</option>
+            <option value="show" data-lang="Oromo">Afaan Oromoo — Oromo</option>
+            <option value="show" data-lang="Somali">Soomaali — Somali</option>
+            <option value="show" data-lang="Malagasy">Malagasy</option>
           </optgroup>
           <optgroup label="Browse all languages">
             <option value="https://ebible.org/find/">All languages &amp; translations →</option>
@@ -858,8 +858,11 @@
   // ── Language selector ───────────────────────────────────
   function goToLang() {
     const sel = document.getElementById('lang-select');
+    const opt = sel.options[sel.selectedIndex];
     if (!sel.value) { sel.focus(); return; }
-    const langKey = sel.options[sel.selectedIndex].text.split(' — ')[0].trim();
+    // "All languages" option navigates away; language options show inline results
+    if (sel.value !== 'show') { window.location.href = sel.value; return; }
+    const langKey = opt.dataset.lang;
     const translations = translationData[langKey] || [];
     showResults(langKey, translations);
   }
