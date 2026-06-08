@@ -55,12 +55,17 @@
       padding: 10px 0;
       letter-spacing: -.01em;
     }
-    .site-nav .navbar-brand img {
-      height: 44px;
-      width: 44px;
-      border-radius: 50%;
+    .site-nav .navbar-brand img { display: none; }
+    .ebible-logo {
+      display: block;
       flex-shrink: 0;
+      border-radius: 50%;
+      background: url('https://ebible.org/icon/eBibleorglogo.svg') no-repeat 50% 5%;
+      background-size: 100% 145%;
     }
+    .ebible-logo-nav  { width: 44px; height: 44px; }
+    .ebible-logo-hero { width: 96px; height: 96px; box-shadow: 0 4px 24px rgba(0,0,0,.5); margin: 0 auto 22px; }
+    .ebible-logo-foot { width: 36px; height: 36px; }
     .site-nav .nav-links {
       display: flex;
       gap: 4px;
@@ -157,15 +162,7 @@
       position: relative;
       z-index: 1;
     }
-    .hero-logo {
-      width: 96px;
-      height: 96px;
-      margin: 0 auto 22px;
-      display: block;
-      border-radius: 50%;
-      box-shadow: 0 4px 24px rgba(0,0,0,.5);
-    }
-    .hero h1 {
+.hero h1 {
       font-family: 'Lora', serif;
       font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 600;
@@ -586,7 +583,7 @@
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
   <div class="site-nav-inner">
     <a class="navbar-brand" href="https://ebible.org/">
-      <img src="https://ebible.org/icon/eBibleorglogo.svg" alt="eBible.org logo">
+      <div class="ebible-logo ebible-logo-nav" role="img" aria-label="eBible.org logo"></div>
       eBible.org
     </a>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
@@ -608,7 +605,7 @@
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <img class="hero-logo" src="https://ebible.org/icon/eBibleorglogo.svg" alt="eBible.org">
+    <div class="ebible-logo ebible-logo-hero" role="img" aria-label="eBible.org logo"></div>
     <h1>The Holy Bible,<br><em>in your language.</em></h1>
     <p class="subtitle">Free Bible translations in hundreds of languages — to read online, download, and share without barriers.</p>
 
@@ -817,7 +814,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-brand">
-        <img src="https://ebible.org/icon/eBibleorglogo.svg" alt="eBible.org logo">
+        <div class="ebible-logo ebible-logo-foot" role="img" aria-label="eBible.org logo"></div>
         <span>eBible.org</span>
       </div>
       <div>A ministry of Rainbow Missions, Inc.</div>
