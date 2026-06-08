@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>eBible — Free Bible Translations in Your Language</title>
+  <title>eBible.org — Free Bible Translations in Your Language</title>
   <meta name="description" content="Access free Bible translations in hundreds of languages. Read online, download for offline use, or study the Scriptures in your own language.">
 
   <!-- Bootstrap 5 -->
@@ -15,14 +15,14 @@
 
   <style>
     :root {
-      --navy:   #1a3a5c;
-      --navy-dark: #0f2440;
-      --gold:   #b8860b;
+      --navy:       #1a3a5c;
+      --navy-dark:  #0f2440;
+      --gold:       #b8860b;
       --gold-light: #d4a017;
-      --cream:  #faf8f4;
+      --cream:      #faf8f4;
       --gray-light: #f4f4f6;
-      --text:   #1f2d3d;
-      --muted:  #6b7a8d;
+      --text:       #1f2d3d;
+      --muted:      #6b7a8d;
     }
 
     * { box-sizing: border-box; }
@@ -48,13 +48,19 @@
       align-items: center;
       gap: 10px;
       color: #fff;
-      font-family: 'Lora', serif;
-      font-size: 1.4rem;
-      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
       text-decoration: none;
-      padding: 14px 0;
+      padding: 10px 0;
+      letter-spacing: -.01em;
     }
-    .site-nav .navbar-brand span.e { color: var(--gold-light); }
+    .site-nav .navbar-brand img {
+      height: 44px;
+      width: 44px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
     .site-nav .nav-links {
       display: flex;
       gap: 4px;
@@ -82,9 +88,7 @@
       color: #fff;
       margin-left: 6px;
     }
-    .site-nav .nav-links a.btn-give:hover {
-      background: var(--gold-light);
-    }
+    .site-nav .nav-links a.btn-give:hover { background: var(--gold-light); }
     .hamburger {
       display: none;
       background: none;
@@ -122,19 +126,44 @@
 
     /* ── HERO ────────────────────────────────────────────── */
     .hero {
-      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #2a5298 100%);
-      color: #fff;
-      padding: 72px 24px 80px;
-      text-align: center;
       position: relative;
+      color: #fff;
+      padding: 80px 24px 90px;
+      text-align: center;
       overflow: hidden;
+      background-color: var(--navy-dark);
     }
-    .hero::before {
-      content: '';
+    /* Bible photo background */
+    .hero-bg {
       position: absolute;
       inset: 0;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1.5' fill='rgba(255,255,255,0.06)'/%3E%3C/svg%3E");
-      pointer-events: none;
+      background-image: url('https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center 40%;
+      opacity: .28;
+    }
+    /* Dark gradient overlay so text stays readable */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(10,28,55,.72) 0%,
+        rgba(10,28,55,.60) 50%,
+        rgba(10,28,55,.80) 100%
+      );
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-logo {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 22px;
+      display: block;
+      border-radius: 50%;
+      box-shadow: 0 4px 24px rgba(0,0,0,.5);
     }
     .hero h1 {
       font-family: 'Lora', serif;
@@ -142,7 +171,6 @@
       font-weight: 600;
       line-height: 1.2;
       margin-bottom: 18px;
-      position: relative;
     }
     .hero h1 em {
       font-style: italic;
@@ -150,31 +178,29 @@
     }
     .hero .subtitle {
       font-size: clamp(.95rem, 2vw, 1.15rem);
-      color: rgba(255,255,255,.8);
+      color: rgba(255,255,255,.85);
       max-width: 560px;
       margin: 0 auto 40px;
       font-weight: 300;
-      line-height: 1.65;
-      position: relative;
+      line-height: 1.7;
     }
 
     /* ── LANGUAGE FINDER CARD ────────────────────────────── */
     .finder-card {
       background: #fff;
       border-radius: 16px;
-      box-shadow: 0 8px 40px rgba(0,0,0,.22);
-      padding: 32px 36px;
+      box-shadow: 0 8px 40px rgba(0,0,0,.3);
+      padding: 28px 32px;
       max-width: 540px;
       margin: 0 auto;
-      position: relative;
     }
     .finder-card h2 {
-      font-size: 1rem;
-      font-weight: 600;
+      font-size: .95rem;
+      font-weight: 700;
       color: var(--navy);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       text-transform: uppercase;
-      letter-spacing: .07em;
+      letter-spacing: .08em;
     }
     .lang-search-wrap {
       display: flex;
@@ -221,6 +247,7 @@
       margin-top: 12px;
       text-align: center;
     }
+    .finder-note a { color: var(--navy); }
 
     /* ── STAT BAR ────────────────────────────────────────── */
     .stat-bar {
@@ -229,17 +256,14 @@
       border-bottom: 1px solid #e8e4da;
       padding: 28px 24px;
     }
-    .stat-bar .stat-item {
-      text-align: center;
-      padding: 8px 0;
-    }
-    .stat-bar .stat-number {
+    .stat-item { text-align: center; padding: 8px 0; }
+    .stat-number {
       font-size: 2rem;
       font-weight: 700;
       color: var(--navy);
       line-height: 1;
     }
-    .stat-bar .stat-label {
+    .stat-label {
       font-size: .8rem;
       color: var(--muted);
       text-transform: uppercase;
@@ -274,12 +298,13 @@
     .feature-card {
       background: var(--gray-light);
       border-radius: 14px;
-      padding: 32px 28px;
+      overflow: hidden;
       height: 100%;
       border: 1px solid #e8eaee;
       transition: transform .2s, box-shadow .2s, border-color .2s;
       text-decoration: none;
-      display: block;
+      display: flex;
+      flex-direction: column;
       color: inherit;
     }
     .feature-card:hover {
@@ -288,49 +313,76 @@
       border-color: var(--navy);
       color: inherit;
     }
+    /* Optional image at top of card */
+    .card-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+      filter: brightness(.92);
+    }
+    .card-body-inner {
+      padding: 24px 24px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
     .feature-icon {
-      width: 52px;
-      height: 52px;
+      width: 48px;
+      height: 48px;
       background: var(--navy);
-      border-radius: 12px;
+      border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 18px;
-      font-size: 1.4rem;
+      margin-bottom: 14px;
+      font-size: 1.3rem;
       color: #fff;
+      flex-shrink: 0;
     }
     .feature-card h3 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: var(--navy-dark);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .feature-card p {
-      font-size: .88rem;
+      font-size: .87rem;
       color: var(--muted);
       line-height: 1.6;
       margin: 0;
+      flex: 1;
     }
-    .feature-card .card-link {
+    .card-link {
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      margin-top: 16px;
-      font-size: .85rem;
+      margin-top: 14px;
+      font-size: .84rem;
       font-weight: 600;
       color: var(--navy);
       text-decoration: none;
     }
-    .feature-card .card-link:hover { text-decoration: underline; }
+    .card-link:hover { text-decoration: underline; }
 
     /* ── MISSION STRIP ───────────────────────────────────── */
     .mission-strip {
-      background: var(--navy);
+      position: relative;
       color: #fff;
-      padding: 60px 24px;
+      padding: 70px 24px;
       text-align: center;
+      overflow: hidden;
+      background-color: var(--navy);
     }
+    .mission-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1519682577862-22b62b24e493?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: .15;
+    }
+    .mission-content { position: relative; z-index: 1; }
     .mission-strip blockquote {
       font-family: 'Lora', serif;
       font-size: clamp(1.1rem, 2.5vw, 1.5rem);
@@ -365,13 +417,22 @@
       align-items: flex-start;
     }
     footer .footer-brand {
-      font-family: 'Lora', serif;
-      font-size: 1.2rem;
-      color: #fff;
-      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
       margin-bottom: 6px;
     }
-    footer .footer-brand span { color: var(--gold-light); }
+    footer .footer-brand img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+    footer .footer-brand span {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.1rem;
+      color: #fff;
+      font-weight: 700;
+    }
     footer .footer-links {
       display: flex;
       gap: 16px;
@@ -414,15 +475,15 @@
 
 <!-- Prototype notice -->
 <div class="proto-banner">
-  <strong>Prototype</strong> — This page is a design concept for a modernized eBible.org welcome experience. Navigation links go to the live eBible.org site.
+  <strong>Prototype</strong> — This is a design concept for a modernized eBible.org welcome page. All navigation links go to the live eBible.org site.
 </div>
 
 <!-- NAVBAR -->
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
   <div class="site-nav-inner">
     <a class="navbar-brand" href="https://ebible.org/">
-      <i class="bi bi-book-half" style="font-size:1.5rem; color:var(--gold-light);"></i>
-      <span class="e">e</span>Bible
+      <img src="https://ebible.org/icon/eBibleorglogo.svg" alt="eBible.org logo">
+      eBible.org
     </a>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <i class="bi bi-list"></i>
@@ -440,63 +501,68 @@
 
 <!-- HERO -->
 <section class="hero">
-  <h1>The Holy Bible,<br><em>in your language.</em></h1>
-  <p class="subtitle">Free Bible translations in hundreds of languages — to read online, download, and share without barriers.</p>
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img class="hero-logo" src="https://ebible.org/icon/eBibleorglogo.svg" alt="eBible.org">
+    <h1>The Holy Bible,<br><em>in your language.</em></h1>
+    <p class="subtitle">Free Bible translations in hundreds of languages — to read online, download, and share without barriers.</p>
 
-  <!-- Language Finder -->
-  <div class="finder-card">
-    <h2><i class="bi bi-translate" style="margin-right:6px;"></i>Find your language</h2>
-    <div class="lang-search-wrap">
-      <select id="lang-select" aria-label="Select your language">
-        <option value="">— Choose a language —</option>
-        <optgroup label="Most widely spoken">
-          <option value="https://ebible.org/find/?lang=eng">English</option>
-          <option value="https://ebible.org/find/?lang=zho">中文 — Chinese (Mandarin)</option>
-          <option value="https://ebible.org/find/?lang=hin">हिन्दी — Hindi</option>
-          <option value="https://ebible.org/find/?lang=spa">Español — Spanish</option>
-          <option value="https://ebible.org/find/?lang=fra">Français — French</option>
-          <option value="https://ebible.org/find/?lang=ara">العربية — Arabic</option>
-          <option value="https://ebible.org/find/?lang=ben">বাংলা — Bengali</option>
-          <option value="https://ebible.org/find/?lang=por">Português — Portuguese</option>
-          <option value="https://ebible.org/find/?lang=rus">Русский — Russian</option>
-          <option value="https://ebible.org/find/?lang=urd">اردو — Urdu</option>
-          <option value="https://ebible.org/find/?lang=ind">Bahasa Indonesia — Indonesian</option>
-          <option value="https://ebible.org/find/?lang=deu">Deutsch — German</option>
-          <option value="https://ebible.org/find/?lang=jpn">日本語 — Japanese</option>
-          <option value="https://ebible.org/find/?lang=mar">मराठी — Marathi</option>
-          <option value="https://ebible.org/find/?lang=tel">తెలుగు — Telugu</option>
-          <option value="https://ebible.org/find/?lang=tur">Türkçe — Turkish</option>
-          <option value="https://ebible.org/find/?lang=tam">தமிழ் — Tamil</option>
-          <option value="https://ebible.org/find/?lang=vie">Tiếng Việt — Vietnamese</option>
-          <option value="https://ebible.org/find/?lang=kor">한국어 — Korean</option>
-          <option value="https://ebible.org/find/?lang=swh">Kiswahili — Swahili</option>
-        </optgroup>
-        <optgroup label="Pacific &amp; Southeast Asia">
-          <option value="https://ebible.org/find/?lang=tdt">Tetun — Timor-Leste</option>
-          <option value="https://ebible.org/find/?lang=tpi">Tok Pisin — Papua New Guinea</option>
-          <option value="https://ebible.org/find/?lang=ilo">Ilocano — Philippines</option>
-          <option value="https://ebible.org/find/?lang=ceb">Cebuano — Philippines</option>
-          <option value="https://ebible.org/find/?lang=tha">ภาษาไทย — Thai</option>
-          <option value="https://ebible.org/find/?lang=khm">ភាសាខ្មែរ — Khmer</option>
-        </optgroup>
-        <optgroup label="Africa">
-          <option value="https://ebible.org/find/?lang=hau">Hausa</option>
-          <option value="https://ebible.org/find/?lang=yor">Yoruba</option>
-          <option value="https://ebible.org/find/?lang=ibo">Igbo</option>
-          <option value="https://ebible.org/find/?lang=amh">አማርኛ — Amharic</option>
-          <option value="https://ebible.org/find/?lang=orm">Afaan Oromoo</option>
-          <option value="https://ebible.org/find/?lang=som">Soomaali — Somali</option>
-          <option value="https://ebible.org/find/?lang=mlg">Malagasy</option>
-        </optgroup>
-        <optgroup label="Browse all languages">
-          <option value="https://ebible.org/find/">All languages &amp; translations →</option>
-        </optgroup>
-      </select>
-      <button id="go-btn" onclick="goToLang()">
-        <i class="bi bi-arrow-right"></i> Go
-      </button>
+    <!-- Language Finder -->
+    <div class="finder-card">
+      <h2><i class="bi bi-translate" style="margin-right:6px;"></i>Find your language</h2>
+      <div class="lang-search-wrap">
+        <select id="lang-select" aria-label="Select your language">
+          <option value="">— Choose a language —</option>
+          <optgroup label="Most widely spoken">
+            <option value="https://ebible.org/find/?lang=eng">English</option>
+            <option value="https://ebible.org/find/?lang=zho">中文 — Chinese (Mandarin)</option>
+            <option value="https://ebible.org/find/?lang=hin">हिन्दी — Hindi</option>
+            <option value="https://ebible.org/find/?lang=spa">Español — Spanish</option>
+            <option value="https://ebible.org/find/?lang=fra">Français — French</option>
+            <option value="https://ebible.org/find/?lang=ara">العربية — Arabic</option>
+            <option value="https://ebible.org/find/?lang=ben">বাংলা — Bengali</option>
+            <option value="https://ebible.org/find/?lang=por">Português — Portuguese</option>
+            <option value="https://ebible.org/find/?lang=rus">Русский — Russian</option>
+            <option value="https://ebible.org/find/?lang=urd">اردو — Urdu</option>
+            <option value="https://ebible.org/find/?lang=ind">Bahasa Indonesia — Indonesian</option>
+            <option value="https://ebible.org/find/?lang=deu">Deutsch — German</option>
+            <option value="https://ebible.org/find/?lang=jpn">日本語 — Japanese</option>
+            <option value="https://ebible.org/find/?lang=mar">मराठी — Marathi</option>
+            <option value="https://ebible.org/find/?lang=tel">తెలుగు — Telugu</option>
+            <option value="https://ebible.org/find/?lang=tur">Türkçe — Turkish</option>
+            <option value="https://ebible.org/find/?lang=tam">தமிழ் — Tamil</option>
+            <option value="https://ebible.org/find/?lang=vie">Tiếng Việt — Vietnamese</option>
+            <option value="https://ebible.org/find/?lang=kor">한국어 — Korean</option>
+            <option value="https://ebible.org/find/?lang=swh">Kiswahili — Swahili</option>
+          </optgroup>
+          <optgroup label="Pacific &amp; Southeast Asia">
+            <option value="https://ebible.org/find/?lang=tdt">Tetun — Timor-Leste</option>
+            <option value="https://ebible.org/find/?lang=tpi">Tok Pisin — Papua New Guinea</option>
+            <option value="https://ebible.org/find/?lang=ilo">Ilocano — Philippines</option>
+            <option value="https://ebible.org/find/?lang=ceb">Cebuano — Philippines</option>
+            <option value="https://ebible.org/find/?lang=tha">ภาษาไทย — Thai</option>
+            <option value="https://ebible.org/find/?lang=khm">ភាសាខ្មែរ — Khmer</option>
+          </optgroup>
+          <optgroup label="Africa">
+            <option value="https://ebible.org/find/?lang=hau">Hausa</option>
+            <option value="https://ebible.org/find/?lang=yor">Yoruba</option>
+            <option value="https://ebible.org/find/?lang=ibo">Igbo</option>
+            <option value="https://ebible.org/find/?lang=amh">አማርኛ — Amharic</option>
+            <option value="https://ebible.org/find/?lang=orm">Afaan Oromoo</option>
+            <option value="https://ebible.org/find/?lang=som">Soomaali — Somali</option>
+            <option value="https://ebible.org/find/?lang=mlg">Malagasy</option>
+          </optgroup>
+          <optgroup label="Browse all languages">
+            <option value="https://ebible.org/find/">All languages &amp; translations →</option>
+          </optgroup>
+        </select>
+        <button id="go-btn" onclick="goToLang()">
+          <i class="bi bi-arrow-right"></i> Go
+        </button>
+      </div>
+      <p class="finder-note">Over 1,600 translations in 1,000+ languages. Can't find yours? <a href="https://ebible.org/find/">Browse all translations.</a></p>
     </div>
-    <p class="finder-note">Over 1,600 translations in 1,000+ languages. Can't find yours? <a href="https://ebible.org/find/" style="color:var(--navy);">Browse all translations.</a></p>
   </div>
 </section>
 
@@ -529,75 +595,115 @@
   <div class="wrap">
     <div class="section-heading">
       <h2>Everything you need</h2>
-      <p>Whether you want to read, study, download, or share the Scriptures — eBible has you covered.</p>
+      <p>Whether you want to read, study, download, or share the Scriptures — eBible.org has you covered.</p>
     </div>
 
     <div class="row g-4">
+
       <div class="col-12 col-sm-6 col-lg-4">
         <a class="feature-card" href="https://ebible.org/study/">
-          <div class="feature-icon"><i class="bi bi-eye"></i></div>
-          <h3>Read Online</h3>
-          <p>Open the Bible right in your browser. Parallel translations, original Greek and Hebrew, audio, and video support.</p>
-          <span class="card-link">Open Browser Bible <i class="bi bi-arrow-right"></i></span>
+          <img class="card-img"
+               src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=600&q=75"
+               alt="Person reading the Bible">
+          <div class="card-body-inner">
+            <div class="feature-icon"><i class="bi bi-eye"></i></div>
+            <h3>Read Online</h3>
+            <p>Open the Bible right in your browser. Parallel translations, original Greek and Hebrew, audio, and video — all free.</p>
+            <span class="card-link">Open Browser Bible <i class="bi bi-arrow-right"></i></span>
+          </div>
         </a>
       </div>
+
       <div class="col-12 col-sm-6 col-lg-4">
         <a class="feature-card" href="https://ebible.org/find/">
-          <div class="feature-icon"><i class="bi bi-search"></i></div>
-          <h3>Find a Translation</h3>
-          <p>Browse over 1,600 Bible translations from around the world, organized by language and territory.</p>
-          <span class="card-link">Search translations <i class="bi bi-arrow-right"></i></span>
+          <img class="card-img"
+               src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=75"
+               alt="Many languages of the world">
+          <div class="card-body-inner">
+            <div class="feature-icon"><i class="bi bi-search"></i></div>
+            <h3>Find a Translation</h3>
+            <p>Browse over 1,600 Bible translations from around the world, organized by language and territory.</p>
+            <span class="card-link">Search translations <i class="bi bi-arrow-right"></i></span>
+          </div>
         </a>
       </div>
+
       <div class="col-12 col-sm-6 col-lg-4">
         <a class="feature-card" href="https://ebible.org/download.php">
-          <div class="feature-icon"><i class="bi bi-download"></i></div>
-          <h3>Download</h3>
-          <p>Get Bible files in EPUB, PDF, MP3 audio, and app formats. Read offline anywhere — no internet required.</p>
-          <span class="card-link">Download files <i class="bi bi-arrow-right"></i></span>
+          <img class="card-img"
+               src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=75"
+               alt="Devices for reading offline">
+          <div class="card-body-inner">
+            <div class="feature-icon"><i class="bi bi-download"></i></div>
+            <h3>Download</h3>
+            <p>Get Bible files in EPUB, PDF, MP3 audio, and app formats. Read offline anywhere — no internet required.</p>
+            <span class="card-link">Download files <i class="bi bi-arrow-right"></i></span>
+          </div>
         </a>
       </div>
+
       <div class="col-12 col-sm-6 col-lg-4">
         <a class="feature-card" href="https://ebible.org/engwebbe/">
-          <div class="feature-icon"><i class="bi bi-book"></i></div>
-          <h3>World English Bible</h3>
-          <p>A freely redistributable, modern-English Bible translation — no copyright restrictions, free to share and use.</p>
-          <span class="card-link">Read the WEB <i class="bi bi-arrow-right"></i></span>
+          <img class="card-img"
+               src="https://images.unsplash.com/photo-1504052434569-70ad5836ab65?auto=format&fit=crop&w=600&q=75"
+               alt="Open Bible">
+          <div class="card-body-inner">
+            <div class="feature-icon"><i class="bi bi-book"></i></div>
+            <h3>World English Bible</h3>
+            <p>A freely redistributable, modern-English Bible translation — no copyright restrictions, free to share and use.</p>
+            <span class="card-link">Read the WEB <i class="bi bi-arrow-right"></i></span>
+          </div>
         </a>
       </div>
+
       <div class="col-12 col-sm-6 col-lg-4">
         <a class="feature-card" href="https://ebible.org/links.php">
-          <div class="feature-icon"><i class="bi bi-link-45deg"></i></div>
-          <h3>Bible Resources</h3>
-          <p>A curated directory of Bible study tools, commentaries, concordances, and ministry links.</p>
-          <span class="card-link">Browse links <i class="bi bi-arrow-right"></i></span>
+          <div class="card-body-inner" style="padding-top: 32px;">
+            <div class="feature-icon"><i class="bi bi-link-45deg"></i></div>
+            <h3>Bible Resources</h3>
+            <p>A curated directory of Bible study tools, commentaries, concordances, and ministry links from around the web.</p>
+            <span class="card-link">Browse links <i class="bi bi-arrow-right"></i></span>
+          </div>
         </a>
       </div>
+
       <div class="col-12 col-sm-6 col-lg-4">
         <a class="feature-card" href="https://ebible.org/give.php">
-          <div class="feature-icon" style="background: var(--gold);"><i class="bi bi-heart"></i></div>
-          <h3>Support the Mission</h3>
-          <p>eBible is free because donors make it possible. Your gift keeps Scripture accessible to everyone, everywhere.</p>
-          <span class="card-link" style="color: var(--gold);">Give now <i class="bi bi-arrow-right"></i></span>
+          <img class="card-img"
+               src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=600&q=75"
+               alt="Sharing Scripture around the world">
+          <div class="card-body-inner">
+            <div class="feature-icon" style="background: var(--gold);"><i class="bi bi-heart"></i></div>
+            <h3>Support the Mission</h3>
+            <p>eBible.org is free because donors make it possible. Your gift keeps Scripture accessible to everyone, everywhere.</p>
+            <span class="card-link" style="color: var(--gold);">Give now <i class="bi bi-arrow-right"></i></span>
+          </div>
         </a>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- MISSION STRIP -->
 <div class="mission-strip">
-  <blockquote>
-    "Get the Holy Bible to as many people as possible in the languages they understand best and the formats that are most useful to them."
-  </blockquote>
-  <cite>— eBible.org Mission</cite>
+  <div class="mission-bg"></div>
+  <div class="mission-content">
+    <blockquote>
+      "Get the Holy Bible to as many people as possible in the languages they understand best and the formats that are most useful to them."
+    </blockquote>
+    <cite>— eBible.org Mission</cite>
+  </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div>
-      <div class="footer-brand"><span>e</span>Bible</div>
+      <div class="footer-brand">
+        <img src="https://ebible.org/icon/eBibleorglogo.svg" alt="eBible.org logo">
+        <span>eBible.org</span>
+      </div>
       <div>A ministry of Rainbow Missions, Inc.</div>
     </div>
     <ul class="footer-links">
