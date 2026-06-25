@@ -33,11 +33,19 @@ The prototype is live at: **https://macoskjc.github.io/ebible-us/**
 - GitHub token is stored in macOS keychain under `github.com` / `macoskjc`
 
 ### Production server (ebible.us)
-- Host: a.mpj.us  Port: 123
-- Username: ebible_sftp
-- Auth: SSH public key (`~/.ssh/id_bibliatimorleste`)
-- **Note:** As of June 2026, the SSH key has not yet been added to the ebible_sftp account by Michael. Once added, upload with paramiko SFTP as done for bibliatimorleste.org.
-- Web root: TBD (to be confirmed once SSH access is working)
+- Host: `a.mpj.us`  Port: **124** (backup: `home.mpj.cx` port 122)
+- Username: `ebible_sftp`
+- Auth: SSH private key `~/.ssh/id_bibliatimorleste` (same key as bibliatimorleste.org)
+- Web root: `/httpdocs/`
+- Upload command:
+  ```
+  sftp -i ~/.ssh/id_bibliatimorleste -o StrictHostKeyChecking=no -P 124 ebible_sftp@a.mpj.us
+  ```
+- Via Python paramiko:
+  ```python
+  ssh.connect("a.mpj.us", port=124, username="ebible_sftp",
+              key_filename="/Users/jed/.ssh/id_bibliatimorleste")
+  ```
 
 ## How the language selector works
 
