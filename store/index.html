@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Buy a Printed Bible — eBible.org Store</title>
-<meta name="description" content="Printed and Kindle editions of the World English Bible and related eBible.org texts — search by translation, print size, cover, and more.">
+<meta name="description" content="Printed editions and free EPUB downloads of the World English Bible and related eBible.org texts — search by translation, print size, cover, and more.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
@@ -187,6 +187,13 @@
   .btn-buy:hover { background: var(--navy-dark); }
   .btn-buy .price { font-weight: 700; color: var(--gold-light); }
   .btn-buy.out-of-stock { background: #999; pointer-events: none; }
+  .btn-buy.btn-download { background: #1a7a4c; justify-content: center; }
+  .btn-buy.btn-download:hover { background: #145c3a; }
+  .kindle-note {
+    display: block; text-align: center; font-size: .74rem; color: var(--muted);
+    text-decoration: none; margin-top: .1rem;
+  }
+  .kindle-note:hover { color: var(--navy); text-decoration: underline; }
 
   .empty { text-align: center; padding: 4rem 1rem; color: var(--muted); }
   .empty p { font-size: 1.05rem; margin: 0 0 .8rem; }
@@ -229,7 +236,7 @@
 
 <header class="store-header">
   <h1>Buy a Printed Bible</h1>
-  <p>Printed and Kindle editions of the World English Bible and related eBible.org texts.</p>
+  <p>Printed editions and free EPUB downloads of the World English Bible and related eBible.org texts.</p>
 </header>
 
 <form class="filters" id="filters" onsubmit="return false;">

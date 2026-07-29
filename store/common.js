@@ -22,6 +22,15 @@ const EXTENT_LABELS = {
 // The underlying offer data stays in offers.json; only display is filtered.
 const HIDDEN_RETAILERS = new Set(['shop.eBible.org']);
 
+// Amazon doesn't let a Kindle purchase deliver our EPUB, and Amazon's Kindle
+// listings for these translations are never updated when the text changes,
+// so unlike every other offer type, "buy the Kindle edition" isn't actually
+// in a reader's interest here -- offers.json has no Amazon-Kindle rows at
+// all anymore; they're replaced with free eBible.org EPUB downloads (see
+// offer.type below). This is Amazon's own official upload tool, for anyone
+// who still wants the file on a Kindle specifically.
+const KINDLE_INSTRUCTIONS_URL = 'https://www.amazon.com/sendtokindle';
+
 function mmToImperial(heightMm, widthMm, thicknessMm) {
   if (heightMm == null || widthMm == null) return null;
   const hIn = (heightMm / 25.4).toFixed(1);
@@ -89,9 +98,28 @@ function buyButtonsHtml(offers, emptyMessage) {
   if (!offers.length) {
     return `<span style="font-size:.78rem;color:#999;">${emptyMessage}</span>`;
   }
-  return offers.map(o => `
+
+  const buttons = offers.map(o => {
+    if (o.type === 'free_download') {
+      return `
+      <a class="btn-buy btn-download" href="${o.purchase_url}" target="_blank" rel="noopener">
+        <span>Download free EPUB</span>
+      </a>`;
+    }
+    return `
       <a class="btn-buy${o.in_stock ? '' : ' out-of-stock'}" href="${o.purchase_url}" target="_blank" rel="noopener">
         <span>Buy at ${o.retailer}</span>
         ${o.price_usd != null ? `<span class="price">$${o.price_usd.toFixed(2)}</span>` : ''}
-      </a>`).join('');
+      </a>`;
+  }).join('');
+
+  // Only when EPUB is the *only* option (no paid/physical offer at all) is
+  // it worth pointing someone at Amazon's Kindle-upload tool -- if a real
+  // Kindle purchase link is also present, this would just be confusing.
+  const epubOnly = offers.every(o => o.type === 'free_download');
+  const kindleNote = epubOnly
+    ? `<a class="kindle-note" href="${KINDLE_INSTRUCTIONS_URL}" target="_blank" rel="noopener">Instructions for sending to your Kindle →</a>`
+    : '';
+
+  return buttons + kindleNote;
 }
