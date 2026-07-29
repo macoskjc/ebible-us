@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+<meta name="description" content="The World English Bible — a modern, public domain English translation of the Holy Bible">
+<title>World English Bible — WorldEnglish.Bible</title>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="/css/font-icons.min.css">
+<link rel="stylesheet" type="text/css" href="/css/theme-vendors.min.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/css/custom.css" />
+<link rel="stylesheet" type="text/css" href="/css/responsive.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.edition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  margin: 28px 0;
+}
+.edition-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 22px;
+  background: #fff;
+}
+.edition-card h3 {
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  color: #111;
+}
+.edition-card .abbr {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  font-family: monospace;
+  font-size: 0.78em;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+.edition-card p {
+  font-family: sans-serif;
+  font-size: 0.85em;
+  color: #555;
+  line-height: 1.55;
+  margin: 0 0 14px 0;
+}
+.edition-links a {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  color: #1a6bbf;
+  text-decoration: none;
+  font-weight: 600;
+}
+.edition-links a:hover { text-decoration: underline; }
+
+.audio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 20px 0 32px;
+}
+.audio-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 18px 20px;
+  background: #fff;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.audio-card .fa {
+  font-size: 1.4em;
+  color: #c0392b;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.audio-card .audio-text { font-family: sans-serif; font-size: 0.87em; }
+.audio-card .audio-text a { color: #111; font-weight: 600; text-decoration: none; }
+.audio-card .audio-text a:hover { text-decoration: underline; }
+.audio-card .audio-text p { color: #777; font-size: 0.85em; margin: 3px 0 0; }
+
+.print-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 20px 0 32px;
+}
+.print-card {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 0.83em;
+  color: #555;
+}
+.print-card img {
+  width: 80px;
+  height: 120px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  display: block;
+  margin: 0 auto 10px;
+}
+.print-card a { color: #1a6bbf; font-weight: 600; text-decoration: none; font-size: 0.9em; }
+.print-card a:hover { text-decoration: underline; }
+.print-card .isbn { color: #aaa; font-size: 0.85em; }
+
+h2.section-head {
+  font-family: sans-serif;
+  font-size: 1.05em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #111;
+  border-bottom: 2px solid #111;
+  padding-bottom: 6px;
+  margin: 36px 0 4px;
+}
+.intro-text {
+  font-family: sans-serif;
+  font-size: 0.95em;
+  color: #555;
+  line-height: 1.75;
+  max-width: 680px;
+  margin-bottom: 4px;
+}
+</style>
+</head>
+
+<body data-mobile-nav-style="classic">
+
+<!-- NAVBAR -->
+<header class="header-with-topbar">
+  <nav class="navbar navbar-expand-lg top-space navbar-light bg-black header-light fixed-top navbar-boxed" style="top:48.8px;">
+    <div class="container-fluid nav-header-container">
+      <div class="ps-lg-0 d-flex align-items-center" style="flex:1;min-width:0;">
+        <a class="navbar-brand" href="/worldenglish/">
+          <img src="https://worldenglish.bible/weblogo.jpg" class="default-logo" alt="World English Bible" height="42">
+          <img src="https://worldenglish.bible/weblogo.jpg" class="alt-logo" alt="World English Bible" width="0" height="0">
+          <img src="https://worldenglish.bible/weblogo.jpg" class="mobile-logo" alt="World English Bible" width="0" height="0">
+        </a>
+      </div>
+      <div class="col-auto bg-black menu-order px-lg-0">
+        <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-line"></span><span class="navbar-toggler-line"></span>
+          <span class="navbar-toggler-line"></span><span class="navbar-toggler-line"></span>
+        </button>
+        <div class="bg-black collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav alt-font">
+            <li class="nav-item"><a href="https://eBible.org/engwebu/" class="nav-link">Read Online</a></li>
+            <li class="nav-item"><a href="https://eBible.org/study/" class="nav-link">Study</a></li>
+            <li class="nav-item"><a href="https://eBible.org/webaudio/" class="nav-link">Audio</a></li>
+            <li class="nav-item"><a href="https://shop.ebible.org/" class="nav-link">Buy</a></li>
+            <li class="nav-item"><a href="https://worldenglish.bible/webupdates.php" class="nav-link">Updates</a></li>
+            <li class="nav-item"><a href="https://eBible.org/cgi-bin/contact.cgi" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero-frame-top"></div>
+<section class="p-0"><div class="page-header-hero-generic"></div></section>
+<div class="hero-frame-bottom"></div>
+
+<!-- CONTENT -->
+<section>
+<div class="container slim-container">
+
+  <h1 class="h1-main-title alt-font font-weight-600 text-extra-dark-gray w-95">World English Bible</h1>
+  <p class="intro-text">The World English Bible (WEB) is a free, public domain translation of the Holy Bible — modern English, accurate, and freely shareable. No copyright restrictions. Read, download, print, or share without asking permission.</p>
+
+  <!-- EDITIONS -->
+  <h2 class="section-head">Editions</h2>
+  <div class="edition-grid">
+
+    <div class="edition-card">
+      <div class="abbr">WEBU</div>
+      <h3>World English Bible Updated</h3>
+      <p>The current, actively-maintained edition. Uses "LORD" instead of "Yahweh." U.S.A. spelling. Old and New Testaments.</p>
+      <div class="edition-links">
+        <a href="https://eBible.org/engwebu/" target="_blank"><i class="fa fa-book"></i> Read</a>
+        <a href="https://eBible.org/epub/engwebu.epub" target="_blank"><i class="fa fa-download"></i> ePub</a>
+        <a href="https://eBible.org/find/show.php?id=engwebu" target="_blank">Details</a>
+      </div>
+    </div>
+
+    <div class="edition-card">
+      <div class="abbr">WEB / WEBUS</div>
+      <h3>World English Bible Classic</h3>
+      <p>The original edition using "Yahweh" for the divine name. U.S.A. spelling. Includes Old Testament, New Testament, and Deuterocanon.</p>
+      <div class="edition-links">
+        <a href="https://eBible.org/web/" target="_blank"><i class="fa fa-book"></i> Read</a>
+        <a href="https://eBible.org/epub/eng-web.epub" target="_blank"><i class="fa fa-download"></i> ePub</a>
+        <a href="https://eBible.org/find/show.php?id=eng-web" target="_blank">Details</a>
+      </div>
+    </div>
+
+    <div class="edition-card">
+      <div class="abbr">WEBBE</div>
+      <h3>World English Bible British Edition</h3>
+      <p>British/International spelling ("colour," "honour," etc.) with Deuterocanon. Uses "LORD."</p>
+      <div class="edition-links">
+        <a href="https://eBible.org/webbe/" target="_blank"><i class="fa fa-book"></i> Read</a>
+        <a href="https://eBible.org/epub/eng-webbe.epub" target="_blank"><i class="fa fa-download"></i> ePub</a>
+        <a href="https://eBible.org/find/show.php?id=eng-webbe" target="_blank">Details</a>
+      </div>
+    </div>
+
+    <div class="edition-card">
+      <div class="abbr">WEBP</div>
+      <h3>World English Bible Protestant</h3>
+      <p>66-book Protestant canon only (no Deuterocanon). U.S.A. spelling, "LORD."</p>
+      <div class="edition-links">
+        <a href="https://eBible.org/find/show.php?id=engwebp" target="_blank"><i class="fa fa-book"></i> Read</a>
+        <a href="https://eBible.org/epub/engwebp.epub" target="_blank"><i class="fa fa-download"></i> ePub</a>
+        <a href="https://eBible.org/find/show.php?id=engwebp" target="_blank">Details</a>
+      </div>
+    </div>
+
+    <div class="edition-card">
+      <div class="abbr">WEBC</div>
+      <h3>World English Bible Catholic</h3>
+      <p>Catholic canon arrangement. Includes Deuterocanonical books placed in traditional Catholic order.</p>
+      <div class="edition-links">
+        <a href="https://eBible.org/find/show.php?id=eng-web-c" target="_blank"><i class="fa fa-book"></i> Read</a>
+        <a href="https://eBible.org/epub/eng-web-c.epub" target="_blank"><i class="fa fa-download"></i> ePub</a>
+        <a href="https://eBible.org/find/show.php?id=eng-web-c" target="_blank">Details</a>
+      </div>
+    </div>
+
+    <div class="edition-card">
+      <div class="abbr">WMB / WMBB</div>
+      <h3>World Messianic Bible</h3>
+      <p>Uses Hebrew names (Yeshua, Adonai, etc.). Available in U.S.A. and British editions.</p>
+      <div class="edition-links">
+        <a href="https://eBible.org/find/show.php?id=engwmb" target="_blank"><i class="fa fa-book"></i> Read (USA)</a>
+        <a href="https://eBible.org/find/show.php?id=engwmbb" target="_blank"><i class="fa fa-book"></i> Read (British)</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AUDIO -->
+  <h2 class="section-head">Audio</h2>
+  <div class="audio-grid">
+
+    <div class="audio-card">
+      <i class="fa fa-volume-up"></i>
+      <div class="audio-text">
+        <a href="https://eBible.org/web/audio/" target="_blank">Single-Voice Audio</a>
+        <p>Complete World English Bible, single narrator</p>
+      </div>
+    </div>
+
+    <div class="audio-card">
+      <i class="fa fa-volume-up"></i>
+      <div class="audio-text">
+        <a href="https://eBible.org/web/mp3/" target="_blank">Multi-Voice NT Audio</a>
+        <p>New Testament with multiple voices and music</p>
+      </div>
+    </div>
+
+    <div class="audio-card">
+      <i class="fa fa-volume-up"></i>
+      <div class="audio-text">
+        <a href="https://ebible.org/eng-webbe/mp3/" target="_blank">British Edition AI Audio</a>
+        <p>AI-generated audio for the British Edition</p>
+      </div>
+    </div>
+
+    <div class="audio-card">
+      <i class="fa fa-volume-up"></i>
+      <div class="audio-text">
+        <a href="https://eBible.org/webaudio/" target="_blank">All Audio Downloads</a>
+        <p>Full listing of all WEB audio formats</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PRINT -->
+  <h2 class="section-head">Print Editions</h2>
+  <p class="intro-text" style="margin-bottom:16px;">Available from <a href="https://brokenyokepublishing.com/product-category/bibles/" target="_blank">Broken Yoke Publishing</a>, <a href="https://shop.ebible.org/" target="_blank">shop.eBible.org</a>, and Amazon.</p>
+  <div class="print-grid">
+
+    <div class="print-card">
+      <img src="https://ebible.us/978-1-63656-022-9covertn.jpg" alt="WEB Ecumenical Edition recycled leather">
+      <a href="https://brokenyokepublishing.com/product/world-english-bible-ecumenical-edition/" target="_blank">WEB Ecumenical Edition — Recycled Leather</a><br>
+      <span class="isbn">ISBN 978-1-63656-022-9</span>
+    </div>
+
+    <div class="print-card">
+      <img src="https://ebible.us/978-1-63656-000-7covertn.jpg" alt="WEB USA hardcover">
+      <a href="https://shop.ebible.org/product/world-english-bible-u-s-a-spelling-old-and-new-testaments-3/" target="_blank">WEB USA Spelling — Recycled Leather</a><br>
+      <span class="isbn">ISBN 978-1-63656-001-4</span>
+    </div>
+
+    <div class="print-card">
+      <img src="https://ebible.us/978-1-63656-020-5covertn.jpg" alt="WEB USA paperback">
+      <a href="https://www.amazon.com/dp/1636560202/ebibleorg-20" target="_blank">WEB USA Spelling — Paperback</a><br>
+      <span class="isbn">ISBN 978-1-63656-020-5</span>
+    </div>
+
+    <div class="print-card">
+      <img src="https://ebible.us/978-1-63656-021-2covertn.jpg" alt="WEB British paperback">
+      <a href="https://www.amazon.com/dp/1636560210/ebibleorg-20" target="_blank">WEB British Spelling — Paperback</a><br>
+      <span class="isbn">ISBN 978-1-63656-021-2</span>
+    </div>
+
+    <div class="print-card">
+      <img src="https://ebible.us/digitalcoverengwebp.jpg" alt="WEB Protestant digital">
+      <a href="https://eBible.org/find/show.php?id=engwebp" target="_blank">WEB Protestant Edition</a><br>
+      <span class="isbn">66-book canon, free download</span>
+    </div>
+
+    <div class="print-card">
+      <img src="https://ebible.us/978-1-63656-015-1covertn.jpg" alt="WEB hardcover color">
+      <a href="https://www.amazon.com/dp/1636560156/ebibleorg-20" target="_blank">WEB USA — Hard Cover, Color</a><br>
+      <span class="isbn">ISBN 978-1-63656-015-1</span>
+    </div>
+
+  </div>
+
+  <!-- ABOUT -->
+  <h2 class="section-head">About</h2>
+  <p class="intro-text">The World English Bible is based on the American Standard Version (1901) and has been in continuous development since 1997 by editor Michael Paul Johnson. It is in the public domain — no copyright, no permissions needed. <a href="https://eBible.org/eng-web/webfaq.htm" target="_blank">Read the FAQ →</a></p>
+  <p class="intro-text" style="margin-top:10px;">
+    <a href="https://eBible.org/webhistory.htm" target="_blank">Translation history</a> &nbsp;·&nbsp;
+    <a href="https://worldenglish.bible/webupdates.php" target="_blank">Recent updates</a> &nbsp;·&nbsp;
+    <a href="https://eBible.org/eng-web/copyright.htm" target="_blank">Legal &amp; copyright status</a> &nbsp;·&nbsp;
+    <a href="http://MLJohnson.org/partners" target="_blank">Support the editor</a>
+  </p>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-dark bg-black padding-slim-top">
+  <div class="footer-top padding-40px-tb border-bottom border-color-white-transparent">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-3 text-center text-md-start sm-margin-20px-bottom">
+          <img class="circle-black-bg" src="https://worldenglish.bible/weblogo.jpg" alt="World English Bible" style="max-height:80px;">
+        </div>
+        <div class="col-12 col-md-6 text-center sm-margin-20px-bottom">
+          <span class="alt-font font-weight-500 d-inline-block align-middle margin-5px-right text-uppercase text-white">
+            <p>The World English Bible is in the public domain.<br>
+            Editor: <a href="http://MLJohnson.org" target="_blank">Michael Paul Johnson</a> &nbsp;·&nbsp;
+            Hosted by <a href="https://eBible.org/">eBible.org</a><br>
+            <a href="https://eBible.org/privacy.php">Privacy Policy</a> &nbsp;&nbsp;
+            <a href="https://eBible.org/legal.php">Legal Notices</a></p>
+          </span>
+        </div>
+        <div class="col-12 col-md-3 text-center text-md-end"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="scroll-top-arrow" href="javascript:void(0);"><i class="fa fa-arrow-up"></i></a>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/theme-vendors.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>

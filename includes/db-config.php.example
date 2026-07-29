@@ -1,0 +1,6 @@
+<?php
+// Copy this file to db-config.php (same directory) and fill in real values.
+// db-config.php is gitignored -- never commit real credentials.
+$mysqlserver = 'localhost';
+$mysqluser   = 'CHANGE_ME';
+$mysqlpw     = 'CHANGE_ME';

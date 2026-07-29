@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1" />
+<meta name="description" content="Pacific Bibles — Scriptures in the languages of the Pacific nations">
+<title>Pacific Bibles — PacificBibles.org</title>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="/css/font-icons.min.css">
+<link rel="stylesheet" type="text/css" href="/css/theme-vendors.min.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/css/custom.css" />
+<link rel="stylesheet" type="text/css" href="/css/responsive.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.trans-table { width:100%; border-collapse:collapse; margin-top:16px; font-family:sans-serif; font-size:0.88em; }
+.trans-table thead tr { background:#111; color:#fff; }
+.trans-table thead th { padding:10px 14px; text-align:left; font-weight:600; letter-spacing:0.04em; font-size:0.8em; text-transform:uppercase; }
+.trans-table tbody tr { border-bottom:1px solid #eee; transition:background 0.1s; }
+.trans-table tbody tr:hover { background:#f7f7f7; }
+.trans-table td { padding:8px 14px; vertical-align:middle; color:#333; }
+.trans-table td a { color:#333; font-weight:600; text-decoration:none; }
+.trans-table td a:hover { text-decoration:underline; }
+.trans-table td:nth-child(4) a { color:#555; font-weight:400; font-size:0.85em; }
+.badge { display:inline-block; padding:2px 8px; border-radius:10px; font-size:0.75em; font-weight:700; white-space:nowrap; }
+.search-bar { margin:24px 0 8px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.search-bar input { padding:8px 14px; border:1px solid #ccc; border-radius:4px; font-size:0.95em; width:300px; font-family:sans-serif; }
+.search-bar input:focus { border-color:#888; outline:none; }
+.result-count { font-family:sans-serif; font-size:0.82em; color:#888; }
+#no-results { display:none; font-family:sans-serif; font-size:0.9em; color:#888; padding:20px 0; }
+.region-links { font-family:sans-serif; font-size:0.88em; margin:8px 0 24px; }
+.region-links a { color:#1a6bbf; margin-right:14px; text-decoration:none; font-weight:600; }
+.region-links a:hover { text-decoration:underline; }
+</style>
+</head>
+<body data-mobile-nav-style="classic">
+<header class="header-with-topbar">
+  <nav class="navbar navbar-expand-lg top-space navbar-light bg-black header-light fixed-top navbar-boxed" style="top:48.8px;">
+    <div class="container-fluid nav-header-container">
+      <div class="ps-lg-0 d-flex align-items-center" style="flex:1;min-width:0;">
+        <a class="navbar-brand" href="/pacificbibles/">
+          <img src="smallglobe.gif" data-at2x="smallglobe.gif" class="default-logo" alt="Pacific Bibles" height="48">
+          <img src="smallglobe.gif" data-at2x="smallglobe.gif" class="alt-logo" alt="Pacific Bibles" width="0" height="0">
+          <img src="smallglobe.gif" data-at2x="smallglobe.gif" class="mobile-logo" alt="Pacific Bibles" width="0" height="0">
+        </a>
+      </div>
+      <div class="col-auto bg-black menu-order px-lg-0">
+        <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
+          <span class="navbar-toggler-line"></span><span class="navbar-toggler-line"></span>
+          <span class="navbar-toggler-line"></span><span class="navbar-toggler-line"></span>
+        </button>
+        <div class="bg-black collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav alt-font">
+            <li class="nav-item"><a href="/pacificbibles/" class="nav-link">Translations</a></li>
+            <li class="nav-item"><a href="https://pacificbibles.org/links.php" class="nav-link">Links</a></li>
+            <li class="nav-item"><a href="https://eBible.org/cgi-bin/contact.cgi" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="https://eBible.org/" class="nav-link">eBible.org</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="hero-frame-top"></div>
+<section class="p-0"><div class="page-header-hero-generic"></div></section>
+<div class="hero-frame-bottom"></div>
+<section>
+<div class="container slim-container">
+  <h1 class="h1-main-title alt-font font-weight-600 text-extra-dark-gray w-95">Pacific Bibles</h1>
+  <p style="font-family:sans-serif;font-size:0.95em;color:#555;line-height:1.7;max-width:680px;margin-bottom:8px;">
+    Scriptures in the vernacular languages of the Pacific — <strong>460 translations</strong> across Papua New Guinea, Australia, Solomon Islands, Vanuatu, Micronesia, and beyond. Over 1,250 living languages are spoken in the Pacific region.
+  </p>
+  <p style="font-family:sans-serif;font-size:0.95em;color:#555;line-height:1.7;max-width:680px;margin-bottom:4px;">
+    Ce site donne accès aux Écritures dans les langues vernaculaires du Pacifique.
+  </p>
+  <div class="region-links">
+    <a href="https://png.bible" target="_blank">Papua New Guinea</a>
+    <a href="https://solomons.bible" target="_blank">Solomon Islands</a>
+    <a href="https://fsm.bible" target="_blank">Micronesia</a>
+    <a href="https://baebol.org" target="_blank">Vanuatu</a>
+    <a href="http://aboriginalbibles.org.au/" target="_blank">Australia</a>
+    <a href="https://eBible.org/ton/" target="_blank">Tonga</a>
+  </div>
+  <div class="search-bar">
+    <input type="text" id="lang-search" placeholder="Search language, title, or country…" oninput="filterTable()">
+    <span class="result-count" id="result-count">Showing all 460 translations</span>
+  </div>
+  <table class="trans-table">
+    <thead>
+      <tr>
+        <th style="width:20%">Language</th>
+        <th style="width:38%">Title</th>
+        <th style="width:18%">Country</th>
+        <th style="width:12%">ePub</th>
+        <th style="width:12%">Coverage</th>
+      </tr>
+    </thead>
+    <tbody id="trans-body">
+<tr data-search="adnyamathanha adnyamathanha australia"><td>Adnyamathanha</td><td><a href="details.php?id=adt" target=_blank>Adnyamathanha</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="alawa alawa australia"><td>Alawa</td><td><a href="details.php?id=alh" target=_blank>Alawa</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="alyawarr alyawarr australia"><td>Alyawarr</td><td><a href="details.php?id=aly" target=_blank>Alyawarr</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="anindilyakwa anindilyakwa australia"><td>Anindilyakwa</td><td><a href="details.php?id=aoi" target=_blank>Anindilyakwa</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="anmayerr anmatyerre australia"><td>Anmayerr</td><td><a href="details.php?id=amx" target=_blank>Anmatyerre</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="western arrarnta arrarnta, western australia"><td>Western Arrarnta</td><td><a href="details.php?id=are" target=_blank>Arrarnta, Western</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="eastern arrente arrernte, eastern australia"><td>Eastern Arrente</td><td><a href="details.php?id=aer" target=_blank>Arrernte, Eastern</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="awabakalkoba awabakal australia"><td>Awabakalkoba</td><td><a href="details.php?id=awk" target=_blank>Awabakal</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="burarra burarra australia"><td>Burarra</td><td><a href="details.php?id=bvr" target=_blank>Burarra</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="marraŋu dhuwal australia"><td>Marraŋu</td><td><a href="details.php?id=dwu" target=_blank>Dhuwal</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="ḻiyagawumirr dhuwal australia"><td>Ḻiyagawumirr</td><td><a href="details.php?id=dwuliv" target=_blank>Dhuwal</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="dhuwaya dhuwaya australia"><td>Dhuwaya</td><td><a href="details.php?id=dwy" target=_blank>Dhuwaya</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="dieri dieri australia"><td>Dieri</td><td><a href="details.php?id=dif" target=_blank>Dieri</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="djambarrpuyŋu djambarrpuyngu australia"><td>Djambarrpuyŋu</td><td><a href="details.php?id=djr" target=_blank>Djambarrpuyngu</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="dhuwa-dhaŋu'mi djangu australia"><td>Dhuwa-Dhaŋu'mi</td><td><a href="details.php?id=dhgduwadha" target=_blank>Djangu</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="wangurri djangu australia"><td>Wangurri</td><td><a href="details.php?id=dhg" target=_blank>Djangu</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="warramiri ḏolttji djangu australia"><td>Warramiri Ḏolttji</td><td><a href="details.php?id=dhgdol" target=_blank>Djangu</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="ndjebbana djeebbana australia"><td>Ndjebbana</td><td><a href="details.php?id=djj" target=_blank>Djeebbana</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="djinang djinang australia"><td>Djinang</td><td><a href="details.php?id=dji" target=_blank>Djinang</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="barkly english english australia"><td>Barkly English</td><td><a href="details.php?id=engbarkly" target=_blank>English</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="english english australia"><td>English</td><td><a href="details.php?id=engnna" target=_blank>English</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="aboriginal english english australia"><td>Aboriginal English</td><td><a href="details.php?id=engPEV" target=_blank>English</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="gamilaraay gamilaraay australia"><td>Gamilaraay</td><td><a href="details.php?id=kld" target=_blank>Gamilaraay</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="garrwa garrwa australia"><td>Garrwa</td><td><a href="details.php?id=wrk" target=_blank>Garrwa</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="gumatj gumatj australia"><td>Gumatj</td><td><a href="details.php?id=gnn" target=_blank>Gumatj</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="kunwinjku gunwinggu australia"><td>Kunwinjku</td><td><a href="details.php?id=gup" target=_blank>Gunwinggu</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="mayali (jabiru) gunwinggu australia"><td>Mayali (Jabiru)</td><td><a href="details.php?id=gupmay" target=_blank>Gunwinggu</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="gupapuyŋu gupapuyngu australia"><td>Gupapuyŋu</td><td><a href="details.php?id=guf" target=_blank>Gupapuyngu</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="gurrgoni guragone australia"><td>Gurrgoni</td><td><a href="details.php?id=gge" target=_blank>Guragone</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="gurindji gurinji australia"><td>Gurindji</td><td><a href="details.php?id=gue" target=_blank>Gurinji</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="gugu yimidhirr guugu yimidhirr australia"><td>Gugu Yimidhirr</td><td><a href="details.php?id=kky" target=_blank>Guugu Yimidhirr</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="iwaidja iwaidja australia"><td>Iwaidja</td><td><a href="details.php?id=ibd" target=_blank>Iwaidja</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="kala lagaw kala lagaw ya australia"><td>Kala Lagaw</td><td><a href="details.php?id=mwp" target=_blank>Kala Lagaw Ya</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="kitja kitja australia"><td>Kitja</td><td><a href="details.php?id=gia" target=_blank>Kitja</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="kriol kriol australia"><td>Kriol</td><td><a href="details.php?id=rop" target=_blank>Kriol</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="kukatja kukatja australia"><td>Kukatja</td><td><a href="details.php?id=kux" target=_blank>Kukatja</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="kuku yalanji kuku-yalanji australia"><td>Kuku Yalanji</td><td><a href="details.php?id=gvn" target=_blank>Kuku-Yalanji</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="kunbarlang kunbarlang australia"><td>Kunbarlang</td><td><a href="details.php?id=wlg" target=_blank>Kunbarlang</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="guguminjen kunjen australia"><td>Guguminjen</td><td><a href="details.php?id=kjn" target=_blank>Kunjen</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="kuninjku kunwinjku australia"><td>Kuninjku</td><td><a href="details.php?id=gupk" target=_blank>Kunwinjku</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="larrakia larrakia australia"><td>Larrakia</td><td><a href="details.php?id=lrg" target=_blank>Larrakia</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="martu wangka martu wangka australia"><td>Martu Wangka</td><td><a href="details.php?id=mpj" target=_blank>Martu Wangka</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="mawng mawng australia"><td>Mawng</td><td><a href="details.php?id=mph" target=_blank>Mawng</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="meriam mir meriam australia"><td>Meriam Mir</td><td><a href="details.php?id=ulk" target=_blank>Meriam</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="meriam mir meriam australia"><td>Meriam Mir</td><td><a href="details.php?id=ulk1902" target=_blank>Meriam</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="murrinhpatha murrinh-patha australia"><td>Murrinhpatha</td><td><a href="details.php?id=mwf2018" target=_blank>Murrinh-Patha</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="nakara nakara australia"><td>Nakara</td><td><a href="details.php?id=nck" target=_blank>Nakara</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="ngarrindjeri narrinyeri australia"><td>Ngarrindjeri</td><td><a href="details.php?id=nay" target=_blank>Narrinyeri</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="ngaanyatjarra ngaanyatjarra australia"><td>Ngaanyatjarra</td><td><a href="details.php?id=ntj" target=_blank>Ngaanyatjarra</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="noongar noongar australia"><td>Noongar</td><td><a href="details.php?id=nys" target=_blank>Noongar</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="wubuy nunggubuyu australia"><td>Wubuy</td><td><a href="details.php?id=nuy" target=_blank>Nunggubuyu</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="nyangumarta nyangumarta australia"><td>Nyangumarta</td><td><a href="details.php?id=nna" target=_blank>Nyangumarta</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="luritja pintupi-luritja australia"><td>Luritja</td><td><a href="details.php?id=piu2006" target=_blank>Pintupi-Luritja</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="pitjantjatjara pitjantjatjara australia"><td>Pitjantjatjara</td><td><a href="details.php?id=pjt" target=_blank>Pitjantjatjara</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="rembarrnga rembarunga australia"><td>Rembarrnga</td><td><a href="details.php?id=rmb" target=_blank>Rembarunga</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="kuuk thayorre thayore australia"><td>Kuuk Thayorre</td><td><a href="details.php?id=thd" target=_blank>Thayore</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="tiwi (new) tiwi australia"><td>Tiwi (New)</td><td><a href="details.php?id=tiwm" target=_blank>Tiwi</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="tiwi (old) tiwi australia"><td>Tiwi (Old)</td><td><a href="details.php?id=tiw" target=_blank>Tiwi</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="yumplatok torres strait creole australia"><td>Yumplatok</td><td><a href="details.php?id=tcs" target=_blank>Torres Strait Creole</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="walmajarri walmajarri australia"><td>Walmajarri</td><td><a href="details.php?id=wmt" target=_blank>Walmajarri</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="warlpiri warlpiri australia"><td>Warlpiri</td><td><a href="details.php?id=wbp" target=_blank>Warlpiri</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="wik-mungkan wik-mungkan australia"><td>Wik-Mungkan</td><td><a href="details.php?id=wim" target=_blank>Wik-Mungkan</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="worrorra worrorra australia"><td>Worrorra</td><td><a href="details.php?id=wro" target=_blank>Worrorra</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="yän-nhaŋu yan-nhangu australia"><td>Yän-nhaŋu</td><td><a href="details.php?id=jay" target=_blank>Yan-nhangu</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="yanyuwa yanyuwa australia"><td>Yanyuwa</td><td><a href="details.php?id=jao" target=_blank>Yanyuwa</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="yindjibarndi yindjibarndi australia"><td>Yindjibarndi</td><td><a href="details.php?id=yij" target=_blank>Yindjibarndi</a></td><td>Australia</td><td>—</td></tr>
+<tr data-search="français french france"><td>français</td><td><a href="details.php?id=frasbl" target=_blank>French</a></td><td>France</td><td>—</td></tr>
+<tr data-search="français french france"><td>français</td><td><a href="details.php?id=fraLSG" target=_blank>French</a></td><td>France</td><td>—</td></tr>
+<tr data-search="français french france"><td>français</td><td><a href="details.php?id=francl" target=_blank>French</a></td><td>France</td><td>—</td></tr>
+<tr data-search="français french france"><td>français</td><td><a href="details.php?id=fra_fob" target=_blank>French</a></td><td>France</td><td>—</td></tr>
+<tr data-search="français french france"><td>Français</td><td><a href="details.php?id=frajnd" target=_blank>French</a></td><td>France</td><td>—</td></tr>
+<tr data-search="chuukese chuukese micronesia"><td>Chuukese</td><td><a href="details.php?id=chk" target=_blank>Chuukese</a></td><td>Micronesia</td><td>—</td></tr>
+<tr data-search="kapingamarangi kapingamarangi micronesia"><td>Kapingamarangi</td><td><a href="details.php?id=kpg" target=_blank>Kapingamarangi</a></td><td>Micronesia</td><td>—</td></tr>
+<tr data-search="kosrae kosraean micronesia"><td>Kosrae</td><td><a href="details.php?id=kos" target=_blank>Kosraean</a></td><td>Micronesia</td><td>—</td></tr>
+<tr data-search="mwoakilloa mokilese micronesia"><td>Mwoakilloa</td><td><a href="details.php?id=mkj" target=_blank>Mokilese</a></td><td>Micronesia</td><td>—</td></tr>
+<tr data-search="pohnpeian pohnpeian micronesia"><td>Pohnpeian</td><td><a href="details.php?id=pon2006" target=_blank>Pohnpeian</a></td><td>Micronesia</td><td>—</td></tr>
+<tr data-search="pohnpeian pohnpeian micronesia"><td>Pohnpeian</td><td><a href="details.php?id=pon2006a" target=_blank>Pohnpeian</a></td><td>Micronesia</td><td>—</td></tr>
+<tr data-search="pohnpeian pohnpeian micronesia"><td>Pohnpeian</td><td><a href="details.php?id=pon-pdn" target=_blank>Pohnpeian</a></td><td>Micronesia</td><td>—</td></tr>
+<tr data-search="pohnpeian pohnpeian micronesia"><td>Pohnpeian</td><td><a href="details.php?id=pon" target=_blank>Pohnpeian</a></td><td>Micronesia</td><td>—</td></tr>
+<tr data-search="satawalese satawalese micronesia"><td>Satawalese</td><td><a href="details.php?id=stw" target=_blank>Satawalese</a></td><td>Micronesia</td><td>—</td></tr>
+<tr data-search="ulithian ulithian micronesia"><td>Ulithian</td><td><a href="details.php?id=uli" target=_blank>Ulithian</a></td><td>Micronesia</td><td>—</td></tr>
+<tr data-search="yapese yapese micronesia"><td>Yapese</td><td><a href="details.php?id=yap" target=_blank>Yapese</a></td><td>Micronesia</td><td>—</td></tr>
+<tr data-search="māori māori new zealand"><td>Māori</td><td><a href="details.php?id=mri2012" target=_blank>Māori</a></td><td>New Zealand</td><td>—</td></tr>
+<tr data-search="māori māori new zealand"><td>Māori</td><td><a href="details.php?id=mri" target=_blank>Māori</a></td><td>New Zealand</td><td>—</td></tr>
+<tr data-search="'auhelawa 'auhelawa papua new guinea"><td>'Auhelawa</td><td><a href="details.php?id=kud" target=_blank>'Auhelawa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="'auhelawa ’auhelawa papua new guinea"><td>'Auhelawa</td><td><a href="details.php?id=kud2014" target=_blank>’Auhelawa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="abau abau papua new guinea"><td>Abau</td><td><a href="details.php?id=aau" target=_blank>Abau</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="adzera adzera papua new guinea"><td>Adzera</td><td><a href="details.php?id=adz" target=_blank>Adzera</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="agarabi agarabi papua new guinea"><td>Agarabi</td><td><a href="details.php?id=agd" target=_blank>Agarabi</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="akukem akukem papua new guinea"><td>Akukem</td><td><a href="details.php?id=spm" target=_blank>Akukem</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="alamblak alamblak papua new guinea"><td>Alamblak</td><td><a href="details.php?id=amp" target=_blank>Alamblak</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="alekano (gahuku) alekano or gahuku papua new guinea"><td>Alekano (Gahuku)</td><td><a href="details.php?id=gah" target=_blank>Alekano or Gahuku</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="sawiyanu ama papua new guinea"><td>Sawiyanu</td><td><a href="details.php?id=amm" target=_blank>Ama</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="amanab (naineri) amanab papua new guinea"><td>Amanab (Naineri)</td><td><a href="details.php?id=amn-n" target=_blank>Amanab</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="amanab amanab papua new guinea"><td>Amanab</td><td><a href="details.php?id=amn-amanab" target=_blank>Amanab</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="ambulas (maprik) ambulas papua new guinea"><td>Ambulas (Maprik)</td><td><a href="details.php?id=abt-maprik" target=_blank>Ambulas</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="amele amele papua new guinea"><td>Amele</td><td><a href="details.php?id=aey" target=_blank>Amele</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="aneme wake aneme wake papua new guinea"><td>Aneme Wake</td><td><a href="details.php?id=aby" target=_blank>Aneme Wake</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="angaataha angaataha papua new guinea"><td>Angaataha</td><td><a href="details.php?id=agm" target=_blank>Angaataha</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="angor angor papua new guinea"><td>Angor</td><td><a href="details.php?id=agg" target=_blank>Angor</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="anjam anjam papua new guinea"><td>Anjam</td><td><a href="details.php?id=boj" target=_blank>Anjam</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="anjam anjam papua new guinea"><td>Anjam</td><td><a href="details.php?id=boj2014" target=_blank>Anjam</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="angave ankave papua new guinea"><td>Angave</td><td><a href="details.php?id=aak" target=_blank>Ankave</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="anuki anuki papua new guinea"><td>Anuki</td><td><a href="details.php?id=aui" target=_blank>Anuki</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="apalɨ apal papua new guinea"><td>Apalɨ</td><td><a href="details.php?id=ena" target=_blank>Apal</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="arapesh arapesh papua new guinea"><td>Arapesh</td><td><a href="details.php?id=aon" target=_blank>Arapesh</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="are are papua new guinea"><td>Are</td><td><a href="details.php?id=mwc" target=_blank>Are</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="arop-lokep arop-lokep papua new guinea"><td>Arop-Lokep</td><td><a href="details.php?id=apr" target=_blank>Arop-Lokep</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="aruamu aruamu papua new guinea"><td>Aruamu</td><td><a href="details.php?id=msy2020" target=_blank>Aruamu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="aruamu aruamu papua new guinea"><td>Aruamu</td><td><a href="details.php?id=msy" target=_blank>Aruamu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="au au papua new guinea"><td>Au</td><td><a href="details.php?id=avt" target=_blank>Au</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="awa awa papua new guinea"><td>Awa</td><td><a href="details.php?id=awb" target=_blank>Awa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="awara awara papua new guinea"><td>Awara</td><td><a href="details.php?id=awx" target=_blank>Awara</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="awiyaana awiyaana papua new guinea"><td>Awiyaana</td><td><a href="details.php?id=auy" target=_blank>Awiyaana</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="barai barai papua new guinea"><td>Barai</td><td><a href="details.php?id=bbb" target=_blank>Barai</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="bargam bargam papua new guinea"><td>Bargam</td><td><a href="details.php?id=mlp" target=_blank>Bargam</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="bariai bariai papua new guinea"><td>Bariai</td><td><a href="details.php?id=bch" target=_blank>Bariai</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="barok barok papua new guinea"><td>Barok</td><td><a href="details.php?id=bjk" target=_blank>Barok</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="baruga baruga papua new guinea"><td>Baruga</td><td><a href="details.php?id=bjz" target=_blank>Baruga</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="yipma baruya papua new guinea"><td>Yipma</td><td><a href="details.php?id=byr" target=_blank>Baruya</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="bau bau papua new guinea"><td>Bau</td><td><a href="details.php?id=bbd" target=_blank>Bau</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="bedamuni beami papua new guinea"><td>Bedamuni</td><td><a href="details.php?id=beo" target=_blank>Beami</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="bena-bena benabena papua new guinea"><td>Bena-bena</td><td><a href="details.php?id=bef" target=_blank>Benabena</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="biangai biangai papua new guinea"><td>Biangai</td><td><a href="details.php?id=big" target=_blank>Biangai</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="biangai biangai papua new guinea"><td>Biangai</td><td><a href="details.php?id=big2013" target=_blank>Biangai</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="bimin bimin papua new guinea"><td>Bimin</td><td><a href="details.php?id=bhl" target=_blank>Bimin</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="binandere binandere papua new guinea"><td>Binandere</td><td><a href="details.php?id=bhg" target=_blank>Binandere</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="bine bine papua new guinea"><td>Bine</td><td><a href="details.php?id=bon" target=_blank>Bine</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="binumarien binumarien papua new guinea"><td>Binumarien</td><td><a href="details.php?id=bjr" target=_blank>Binumarien</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="bo-ung (mara-gomu) bo-ung papua new guinea"><td>Bo-Ung (Mara-Gomu)</td><td><a href="details.php?id=mux" target=_blank>Bo-Ung</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="bola bola papua new guinea"><td>Bola</td><td><a href="details.php?id=bnp" target=_blank>Bola</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="borei borei papua new guinea"><td>Borei</td><td><a href="details.php?id=gai" target=_blank>Borei</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="borong borong papua new guinea"><td>Borong</td><td><a href="details.php?id=ksr" target=_blank>Borong</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="buang, central/mapos buang papua new guinea"><td>Buang, Central/Mapos</td><td><a href="details.php?id=bzh" target=_blank>Buang</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mangga buang buang, mangga papua new guinea"><td>Mangga Buang</td><td><a href="details.php?id=mmo" target=_blank>Buang, Mangga</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="buhutu buhutu papua new guinea"><td>Buhutu</td><td><a href="details.php?id=bxh" target=_blank>Buhutu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="bukawa bukawa papua new guinea"><td>Bukawa</td><td><a href="details.php?id=buk" target=_blank>Bukawa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="bukiyip bukiyip papua new guinea"><td>Bukiyip</td><td><a href="details.php?id=apeB" target=_blank>Bukiyip</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="coastal arapesh bukiyip papua new guinea"><td>Coastal Arapesh</td><td><a href="details.php?id=apec" target=_blank>Bukiyip</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="bunama bunama papua new guinea"><td>Bunama</td><td><a href="details.php?id=bdd" target=_blank>Bunama</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="bwaidoka bwaidoka papua new guinea"><td>Bwaidoka</td><td><a href="details.php?id=bwd" target=_blank>Bwaidoka</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="tubetube (bwanabwana) bwanabwana papua new guinea"><td>Tubetube (Bwanabwana)</td><td><a href="details.php?id=tte" target=_blank>Bwanabwana</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="tubetube (bwanabwana) bwanabwana papua new guinea"><td>Tubetube (Bwanabwana)</td><td><a href="details.php?id=tteo" target=_blank>Bwanabwana</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="chuave chuave papua new guinea"><td>Chuave</td><td><a href="details.php?id=cjv" target=_blank>Chuave</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="dadibi dadibi papua new guinea"><td>Dadibi</td><td><a href="details.php?id=mps" target=_blank>Dadibi</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="daga daga papua new guinea"><td>Daga</td><td><a href="details.php?id=dgz" target=_blank>Daga</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="dano dano papua new guinea"><td>Dano</td><td><a href="details.php?id=aso" target=_blank>Dano</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="dawawa dawawa papua new guinea"><td>Dawawa</td><td><a href="details.php?id=dww" target=_blank>Dawawa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="dedua dedua papua new guinea"><td>Dedua</td><td><a href="details.php?id=ded" target=_blank>Dedua</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="dobu dobu papua new guinea"><td>Dobu</td><td><a href="details.php?id=dob" target=_blank>Dobu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="doromu-koki doromu-koki papua new guinea"><td>Doromu-Koki</td><td><a href="details.php?id=kqc" target=_blank>Doromu-Koki</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="east kewa east kewa papua new guinea"><td>East Kewa</td><td><a href="details.php?id=kjs" target=_blank>East Kewa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="edolo edolo papua new guinea"><td>Edolo</td><td><a href="details.php?id=etr" target=_blank>Edolo</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="enga enga papua new guinea"><td>Enga</td><td><a href="details.php?id=enq2" target=_blank>Enga</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="managalasi ese or managalasi papua new guinea"><td>Managalasi</td><td><a href="details.php?id=mcq" target=_blank>Ese or Managalasi</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="ewage-notu ewage-notu papua new guinea"><td>Ewage-Notu</td><td><a href="details.php?id=nou" target=_blank>Ewage-Notu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="faiwol faiwol papua new guinea"><td>Faiwol</td><td><a href="details.php?id=fai" target=_blank>Faiwol</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="fanamaket fanamaket papua new guinea"><td>Fanamaket</td><td><a href="details.php?id=bjp" target=_blank>Fanamaket</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="fasu fasu papua new guinea"><td>Fasu</td><td><a href="details.php?id=faa" target=_blank>Fasu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="filifita filifita dialect of mufian papua new guinea"><td>Filifita</td><td><a href="details.php?id=aoj-filifita" target=_blank>Filifita dialect of Mufian</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="folopa folopa papua new guinea"><td>Folopa</td><td><a href="details.php?id=ppo" target=_blank>Folopa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="fore fore papua new guinea"><td>Fore</td><td><a href="details.php?id=for" target=_blank>Fore</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="gapapaiwa gapapaiwa papua new guinea"><td>Gapapaiwa</td><td><a href="details.php?id=pwg" target=_blank>Gapapaiwa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="ghayavi ghayavi papua new guinea"><td>Ghayavi</td><td><a href="details.php?id=bmk" target=_blank>Ghayavi</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="girawa girawa papua new guinea"><td>Girawa</td><td><a href="details.php?id=bbr" target=_blank>Girawa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="girawa girawa papua new guinea"><td>Girawa</td><td><a href="details.php?id=bbr2013" target=_blank>Girawa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="gizrra gizrra papua new guinea"><td>Gizrra</td><td><a href="details.php?id=tof" target=_blank>Gizrra</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="golin golin papua new guinea"><td>Golin</td><td><a href="details.php?id=gvf" target=_blank>Golin</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="guhu-samane guhu-samane papua new guinea"><td>Guhu-Samane</td><td><a href="details.php?id=ghs" target=_blank>Guhu-Samane</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="gumawana gumawana papua new guinea"><td>Gumawana</td><td><a href="details.php?id=gvs" target=_blank>Gumawana</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="gwahatike gwahatike papua new guinea"><td>Gwahatike</td><td><a href="details.php?id=dah" target=_blank>Gwahatike</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="halia halia papua new guinea"><td>Halia</td><td><a href="details.php?id=hla" target=_blank>Halia</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="hanga hundi hanga hundi papua new guinea"><td>Hanga Hundi</td><td><a href="details.php?id=wos" target=_blank>Hanga Hundi</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="haruai haruai papua new guinea"><td>Haruai</td><td><a href="details.php?id=tmd" target=_blank>Haruai</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="huli huli papua new guinea"><td>Huli</td><td><a href="details.php?id=hui" target=_blank>Huli</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="ubuvala iamalele papua new guinea"><td>Ubuvala</td><td><a href="details.php?id=yml" target=_blank>Iamalele</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="ngepma kwundi iatmul papua new guinea"><td>Ngepma Kwundi</td><td><a href="details.php?id=ian" target=_blank>Iatmul</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="iduna iduna papua new guinea"><td>Iduna</td><td><a href="details.php?id=viv" target=_blank>Iduna</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="imbo ungu imbo ungu papua new guinea"><td>Imbo Ungu</td><td><a href="details.php?id=imo" target=_blank>Imbo Ungu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="inoke-yate inoke-yate papua new guinea"><td>Inoke-Yate</td><td><a href="details.php?id=ino" target=_blank>Inoke-Yate</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="inoke-yate inoke-yate papua new guinea"><td>Inoke-Yate</td><td><a href="details.php?id=ino2013" target=_blank>Inoke-Yate</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="ipili ipili papua new guinea"><td>Ipili</td><td><a href="details.php?id=ipi" target=_blank>Ipili</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="iwal iwal papua new guinea"><td>Iwal</td><td><a href="details.php?id=kbm" target=_blank>Iwal</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="sepik iwam iwam, sepik papua new guinea"><td>Sepik Iwam</td><td><a href="details.php?id=iws" target=_blank>Iwam, Sepik</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="iyo iyo papua new guinea"><td>Iyo</td><td><a href="details.php?id=nca" target=_blank>Iyo</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kakabai kakabai papua new guinea"><td>Kakabai</td><td><a href="details.php?id=kqf" target=_blank>Kakabai</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kalam kalam papua new guinea"><td>Kalam</td><td><a href="details.php?id=kmh" target=_blank>Kalam</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kaluli kaluli papua new guinea"><td>Kaluli</td><td><a href="details.php?id=bco" target=_blank>Kaluli</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kamano-kafe kamano papua new guinea"><td>Kamano-Kafe</td><td><a href="details.php?id=kbq" target=_blank>Kamano</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kamasau kamasau papua new guinea"><td>Kamasau</td><td><a href="details.php?id=kms" target=_blank>Kamasau</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kamula kamula papua new guinea"><td>Kamula</td><td><a href="details.php?id=xla" target=_blank>Kamula</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kanasi kanasi papua new guinea"><td>Kanasi</td><td><a href="details.php?id=soq" target=_blank>Kanasi</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kandas kandas papua new guinea"><td>Kandas</td><td><a href="details.php?id=kqw" target=_blank>Kandas</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kandawo kandawo papua new guinea"><td>Kandawo</td><td><a href="details.php?id=gam" target=_blank>Kandawo</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kaninuwa kaninuwa papua new guinea"><td>Kaninuwa</td><td><a href="details.php?id=wat" target=_blank>Kaninuwa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kanite kanite papua new guinea"><td>Kanite</td><td><a href="details.php?id=kmu" target=_blank>Kanite</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kapin kapin papua new guinea"><td>Kapin</td><td><a href="details.php?id=tbx" target=_blank>Kapin</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kara kara papua new guinea"><td>Kara</td><td><a href="details.php?id=leu" target=_blank>Kara</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="karkar-yuri karkar-yuri papua new guinea"><td>Karkar-Yuri</td><td><a href="details.php?id=yuj" target=_blank>Karkar-Yuri</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kasua kasua papua new guinea"><td>Kasua</td><td><a href="details.php?id=khs" target=_blank>Kasua</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kâte kate papua new guinea"><td>Kâte</td><td><a href="details.php?id=kmg" target=_blank>Kate</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kuanua or tinata tuna or tolai kauana papua new guinea"><td>Kuanua or Tinata Tuna or Tolai</td><td><a href="details.php?id=ksd" target=_blank>Kauana</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kalo (keapara) keapara papua new guinea"><td>Kalo (Keapara)</td><td><a href="details.php?id=khz" target=_blank>Keapara</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kein kein papua new guinea"><td>Kein</td><td><a href="details.php?id=bmh" target=_blank>Kein</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="keyagana keyagana papua new guinea"><td>Keyagana</td><td><a href="details.php?id=kyg" target=_blank>Keyagana</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kiriwina kilivila papua new guinea"><td>Kiriwina</td><td><a href="details.php?id=kij" target=_blank>Kilivila</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kire kire papua new guinea"><td>Kire</td><td><a href="details.php?id=geb" target=_blank>Kire</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kope kiwai, northeast papua new guinea"><td>Kope</td><td><a href="details.php?id=kiw" target=_blank>Kiwai, Northeast</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kobon kobon papua new guinea"><td>Kobon</td><td><a href="details.php?id=kpw" target=_blank>Kobon</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mountain koiali koiali, mountain papua new guinea"><td>Mountain Koiali</td><td><a href="details.php?id=kpx" target=_blank>Koiali, Mountain</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="komba komba papua new guinea"><td>Komba</td><td><a href="details.php?id=kpf" target=_blank>Komba</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kombio wampukuamp kombio papua new guinea"><td>Kombio Wampukuamp</td><td><a href="details.php?id=xbi-w" target=_blank>Kombio</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kombio yanimoi kombio papua new guinea"><td>Kombio Yanimoi</td><td><a href="details.php?id=xbi-y" target=_blank>Kombio</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="konai konai papua new guinea"><td>Konai</td><td><a href="details.php?id=kxw" target=_blank>Konai</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="korafe-yegha korafe papua new guinea"><td>Korafe-Yegha</td><td><a href="details.php?id=kpr" target=_blank>Korafe</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kosena kosena papua new guinea"><td>Kosena</td><td><a href="details.php?id=kze" target=_blank>Kosena</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mongi kube papua new guinea"><td>Mongi</td><td><a href="details.php?id=kgf" target=_blank>Kube</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kuman kuman papua new guinea"><td>Kuman</td><td><a href="details.php?id=kue" target=_blank>Kuman</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kuni-boazi kuni-boazi papua new guinea"><td>Kuni-Boazi</td><td><a href="details.php?id=kvg" target=_blank>Kuni-Boazi</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kunimaipa kunimaipa papua new guinea"><td>Kunimaipa</td><td><a href="details.php?id=kup" target=_blank>Kunimaipa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kuot kuot papua new guinea"><td>Kuot</td><td><a href="details.php?id=kto" target=_blank>Kuot</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kurti kurti papua new guinea"><td>Kurti</td><td><a href="details.php?id=ktm" target=_blank>Kurti</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kwanga kwanga papua new guinea"><td>Kwanga</td><td><a href="details.php?id=kwj" target=_blank>Kwanga</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="washkuk kwoma papua new guinea"><td>Washkuk</td><td><a href="details.php?id=kmo" target=_blank>Kwoma</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="glefe kwomtari papua new guinea"><td>Glefe</td><td><a href="details.php?id=kwo" target=_blank>Kwomtari</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kyaka eŋa kyaka enga papua new guinea"><td>Kyaka Eŋa</td><td><a href="details.php?id=kyc" target=_blank>Kyaka Enga</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="kyenele kyenele papua new guinea"><td>Kyenele</td><td><a href="details.php?id=kql" target=_blank>Kyenele</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="label label papua new guinea"><td>Label</td><td><a href="details.php?id=lbb" target=_blank>Label</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="nara lala papua new guinea"><td>Nara</td><td><a href="details.php?id=nrz" target=_blank>Lala</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="lote lote papua new guinea"><td>Lote</td><td><a href="details.php?id=uvl" target=_blank>Lote</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="madak madak papua new guinea"><td>Madak</td><td><a href="details.php?id=mmx" target=_blank>Madak</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="maiadomu maiadomu papua new guinea"><td>Maiadomu</td><td><a href="details.php?id=mzz" target=_blank>Maiadomu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="maiwa maiwa papua new guinea"><td>Maiwa</td><td><a href="details.php?id=mti" target=_blank>Maiwa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="hotê-malê malei-hote papua new guinea"><td>Hotê-Malê</td><td><a href="details.php?id=hot" target=_blank>Malei-Hote</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="manam manam papua new guinea"><td>Manam</td><td><a href="details.php?id=mva" target=_blank>Manam</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="manambu manambu papua new guinea"><td>Manambu</td><td><a href="details.php?id=mle" target=_blank>Manambu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mandara mandara papua new guinea"><td>Mandara</td><td><a href="details.php?id=tbf" target=_blank>Mandara</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mangseng mangseng papua new guinea"><td>Mangseng</td><td><a href="details.php?id=mbh" target=_blank>Mangseng</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mape mape papua new guinea"><td>Mape</td><td><a href="details.php?id=mlh" target=_blank>Mape</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="marik marik papua new guinea"><td>Marik</td><td><a href="details.php?id=dad" target=_blank>Marik</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mato mato papua new guinea"><td>Mato</td><td><a href="details.php?id=met" target=_blank>Mato</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mauwake mauwake papua new guinea"><td>Mauwake</td><td><a href="details.php?id=mhl" target=_blank>Mauwake</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mbula mbula papua new guinea"><td>Mbula</td><td><a href="details.php?id=mna" target=_blank>Mbula</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mekeo mekeo papua new guinea"><td>Mekeo</td><td><a href="details.php?id=mek" target=_blank>Mekeo</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="tok pisin melanesian pidgin papua new guinea"><td>Tok Pisin</td><td><a href="details.php?id=tpiOTNT" target=_blank>Melanesian Pidgin</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="tok pisin melanesian pidgin papua new guinea"><td>Tok Pisin</td><td><a href="details.php?id=tpi" target=_blank>Melanesian Pidgin</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="melpa melpa papua new guinea"><td>Melpa</td><td><a href="details.php?id=med" target=_blank>Melpa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mende mende papua new guinea"><td>Mende</td><td><a href="details.php?id=sim" target=_blank>Mende</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mengen mengen papua new guinea"><td>Mengen</td><td><a href="details.php?id=mee" target=_blank>Mengen</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="menya menya papua new guinea"><td>Menya</td><td><a href="details.php?id=mcr" target=_blank>Menya</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="meramera meramera papua new guinea"><td>Meramera</td><td><a href="details.php?id=mxm" target=_blank>Meramera</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mian weng mian papua new guinea"><td>Mian Weng</td><td><a href="details.php?id=mpt" target=_blank>Mian</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="migabac migabac papua new guinea"><td>Migabac</td><td><a href="details.php?id=mpp" target=_blank>Migabac</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="minaveha minaveha papua new guinea"><td>Minaveha</td><td><a href="details.php?id=mvn" target=_blank>Minaveha</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="miniafia miniafia papua new guinea"><td>Miniafia</td><td><a href="details.php?id=aai" target=_blank>Miniafia</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="minimib minimib dialect of kalam papua new guinea"><td>Minimib</td><td><a href="details.php?id=kmh-m" target=_blank>Minimib dialect of Kalam</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="misima-paneati misima-paneati papua new guinea"><td>Misima-Paneati</td><td><a href="details.php?id=mpx" target=_blank>Misima-Paneati</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="molima molima papua new guinea"><td>Molima</td><td><a href="details.php?id=mox" target=_blank>Molima</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="motu motu papua new guinea"><td>Motu</td><td><a href="details.php?id=meu" target=_blank>Motu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="hiri motu motu, hiri papua new guinea"><td>Hiri Motu</td><td><a href="details.php?id=hmo" target=_blank>Motu, Hiri</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mufian mufian papua new guinea"><td>Mufian</td><td><a href="details.php?id=aoj" target=_blank>Mufian</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mum mum papua new guinea"><td>Mum</td><td><a href="details.php?id=kqa" target=_blank>Mum</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="mussau-emira mussau-emira papua new guinea"><td>Mussau-Emira</td><td><a href="details.php?id=emi" target=_blank>Mussau-Emira</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="saveeng mutu papua new guinea"><td>Saveeng</td><td><a href="details.php?id=tuc-o" target=_blank>Mutu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="saveeng mutu papua new guinea"><td>Saveeng</td><td><a href="details.php?id=tuc-t" target=_blank>Mutu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="muyuw muyuw papua new guinea"><td>Muyuw</td><td><a href="details.php?id=myw" target=_blank>Muyuw</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="naasioi naasioi papua new guinea"><td>Naasioi</td><td><a href="details.php?id=nas" target=_blank>Naasioi</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="nabak nabak papua new guinea"><td>Nabak</td><td><a href="details.php?id=naf" target=_blank>Nabak</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="nakanai nakanai papua new guinea"><td>Nakanai</td><td><a href="details.php?id=nak" target=_blank>Nakanai</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="nali nali papua new guinea"><td>Nali</td><td><a href="details.php?id=nss" target=_blank>Nali</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="nalik nalik papua new guinea"><td>Nalik</td><td><a href="details.php?id=nal" target=_blank>Nalik</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="nama nama papua new guinea"><td>Nama</td><td><a href="details.php?id=nmx" target=_blank>Nama</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="namiai (barai) namiae papua new guinea"><td>Namiai (Barai)</td><td><a href="details.php?id=nvm" target=_blank>Namiae</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="nehan nehan papua new guinea"><td>Nehan</td><td><a href="details.php?id=nsn" target=_blank>Nehan</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="nek nek papua new guinea"><td>Nek</td><td><a href="details.php?id=nif" target=_blank>Nek</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="nend nend papua new guinea"><td>Nend</td><td><a href="details.php?id=anh" target=_blank>Nend</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="nii nii papua new guinea"><td>Nii</td><td><a href="details.php?id=nii" target=_blank>Nii</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="saisai nimoa papua new guinea"><td>Saisai</td><td><a href="details.php?id=nmws" target=_blank>Nimoa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="nobonob nobonob papua new guinea"><td>Nobonob</td><td><a href="details.php?id=gaw" target=_blank>Nobonob</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="arau north tairora papua new guinea"><td>Arau</td><td><a href="details.php?id=tbg-a" target=_blank>North Tairora</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="notsi notsi papua new guinea"><td>Notsi</td><td><a href="details.php?id=ncf" target=_blank>Notsi</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="nukna nukna papua new guinea"><td>Nukna</td><td><a href="details.php?id=klt" target=_blank>Nukna</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="nukumanu nukumanu papua new guinea"><td>Nukumanu</td><td><a href="details.php?id=nuq" target=_blank>Nukumanu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="numaŋgaŋ numanggang papua new guinea"><td>Numaŋgaŋ</td><td><a href="details.php?id=nop" target=_blank>Numanggang</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="nyindrou nyindrou papua new guinea"><td>Nyindrou</td><td><a href="details.php?id=lid" target=_blank>Nyindrou</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="odoodee odoodee papua new guinea"><td>Odoodee</td><td><a href="details.php?id=kkc" target=_blank>Odoodee</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="ogea ogea papua new guinea"><td>Ogea</td><td><a href="details.php?id=eri" target=_blank>Ogea</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="oksapmin oksapmin papua new guinea"><td>Oksapmin</td><td><a href="details.php?id=opm" target=_blank>Oksapmin</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="olo olo papua new guinea"><td>Olo</td><td><a href="details.php?id=ong" target=_blank>Olo</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="ömie omie papua new guinea"><td>Ömie</td><td><a href="details.php?id=aom" target=_blank>Omie</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="veqaura omwunra-toqura or south tairora papua new guinea"><td>Veqaura</td><td><a href="details.php?id=omw-v" target=_blank>Omwunra-Toqura or South Tairora</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="ono ono papua new guinea"><td>Ono</td><td><a href="details.php?id=ons" target=_blank>Ono</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="orokaiva ehija orokaiva papua new guinea"><td>Orokaiva Ehija</td><td><a href="details.php?id=okvh" target=_blank>Orokaiva</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="orokaiva orokaiva papua new guinea"><td>Orokaiva</td><td><a href="details.php?id=okv" target=_blank>Orokaiva</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="patep patep papua new guinea"><td>Patep</td><td><a href="details.php?id=ptp" target=_blank>Patep</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="hinsaal patpatar papua new guinea"><td>Hinsaal</td><td><a href="details.php?id=gfkh" target=_blank>Patpatar</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="patpatar patpatar papua new guinea"><td>Patpatar</td><td><a href="details.php?id=gfk" target=_blank>Patpatar</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="sokarek patpatar papua new guinea"><td>Sokarek</td><td><a href="details.php?id=gfks" target=_blank>Patpatar</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="pele-ata pele-ata papua new guinea"><td>Pele-Ata</td><td><a href="details.php?id=ata" target=_blank>Pele-Ata</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="qaqet qaqet papua new guinea"><td>Qaqet</td><td><a href="details.php?id=byx" target=_blank>Qaqet</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="ramoaaina ramoaaina papua new guinea"><td>Ramoaaina</td><td><a href="details.php?id=rai" target=_blank>Ramoaaina</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="karo (rawa) rawa papua new guinea"><td>Karo (Rawa)</td><td><a href="details.php?id=rwo-karo" target=_blank>Rawa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="rawa (rawa) rawa papua new guinea"><td>Rawa (Rawa)</td><td><a href="details.php?id=rwo-rawa" target=_blank>Rawa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="rotokas rotokas papua new guinea"><td>Rotokas</td><td><a href="details.php?id=roo" target=_blank>Rotokas</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="ampeeli-wojokeso safeyoka papua new guinea"><td>Ampeeli-Wojokeso</td><td><a href="details.php?id=apz" target=_blank>Safeyoka</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="saliba saliba papua new guinea"><td>Saliba</td><td><a href="details.php?id=sbe" target=_blank>Saliba</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="salt-yui salt-yui papua new guinea"><td>Salt-Yui</td><td><a href="details.php?id=sll" target=_blank>Salt-Yui</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="songumsam sam papua new guinea"><td>Songumsam</td><td><a href="details.php?id=snx" target=_blank>Sam</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="saniyo-hiyewe saniyo-hiyewe papua new guinea"><td>Saniyo-Hiyewe</td><td><a href="details.php?id=sny" target=_blank>Saniyo-Hiyewe</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="saposa saposa papua new guinea"><td>Saposa</td><td><a href="details.php?id=sps" target=_blank>Saposa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="seimat seimat papua new guinea"><td>Seimat</td><td><a href="details.php?id=ssg" target=_blank>Seimat</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="selepet selepet papua new guinea"><td>Selepet</td><td><a href="details.php?id=spl" target=_blank>Selepet</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="sembeleke sembeleke papua new guinea"><td>Sembeleke</td><td><a href="details.php?id=ssx" target=_blank>Sembeleke</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="siane siane papua new guinea"><td>Siane</td><td><a href="details.php?id=snp" target=_blank>Siane</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="siane-lambau siane papua new guinea"><td>Siane-Lambau</td><td><a href="details.php?id=snp-lambau" target=_blank>Siane</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="sinaugoro sinaugoro papua new guinea"><td>Sinaugoro</td><td><a href="details.php?id=snc" target=_blank>Sinaugoro</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="sio sio papua new guinea"><td>Sio</td><td><a href="details.php?id=xsi" target=_blank>Sio</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="siroi siroi papua new guinea"><td>Siroi</td><td><a href="details.php?id=ssd" target=_blank>Siroi</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="somau karia somau karia papua new guinea"><td>Somau Karia</td><td><a href="details.php?id=six" target=_blank>Somau Karia</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="burum-mindik or somba-siawari somba-siawari or burum-mindik papua new guinea"><td>Burum-Mindik or Somba-Siawari</td><td><a href="details.php?id=bmu" target=_blank>Somba-Siawari or Burum-Mindik</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="sob dora sop papua new guinea"><td>Sob Dora</td><td><a href="details.php?id=urw" target=_blank>Sop</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="omwunra toqura south tairora papua new guinea"><td>Omwunra Toqura</td><td><a href="details.php?id=omw-a" target=_blank>South Tairora</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="suau suau papua new guinea"><td>Suau</td><td><a href="details.php?id=swp" target=_blank>Suau</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="sudest sudest papua new guinea"><td>Sudest</td><td><a href="details.php?id=tgo" target=_blank>Sudest</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="suena suena papua new guinea"><td>Suena</td><td><a href="details.php?id=sue" target=_blank>Suena</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="sulka sulka papua new guinea"><td>Sulka</td><td><a href="details.php?id=sua" target=_blank>Sulka</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="sursurunga sursurunga papua new guinea"><td>Sursurunga</td><td><a href="details.php?id=sgz" target=_blank>Sursurunga</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="tabo (aramia) tabo papua new guinea"><td>Tabo (Aramia)</td><td><a href="details.php?id=knv-aramia" target=_blank>Tabo</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="tabo (fly river) tabo papua new guinea"><td>Tabo (Fly River)</td><td><a href="details.php?id=knv-fly_river" target=_blank>Tabo</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="tay tai papua new guinea"><td>Tay</td><td><a href="details.php?id=taw" target=_blank>Tai</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="tairora tairora papua new guinea"><td>Tairora</td><td><a href="details.php?id=tbg" target=_blank>Tairora</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="omwunra-toqura (south tairora) tairora, south papua new guinea"><td>Omwunra-Toqura (South Tairora)</td><td><a href="details.php?id=omw" target=_blank>Tairora, South</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="takia takia papua new guinea"><td>Takia</td><td><a href="details.php?id=tbc" target=_blank>Takia</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="takuu takuu papua new guinea"><td>Takuu</td><td><a href="details.php?id=nho" target=_blank>Takuu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="taupota taupota papua new guinea"><td>Taupota</td><td><a href="details.php?id=tpa" target=_blank>Taupota</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="tawala tawala papua new guinea"><td>Tawala</td><td><a href="details.php?id=tbo" target=_blank>Tawala</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="telefol weng telefol papua new guinea"><td>Telefol Weng</td><td><a href="details.php?id=tlf" target=_blank>Telefol</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="tifal tifal papua new guinea"><td>Tifal</td><td><a href="details.php?id=tif" target=_blank>Tifal</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="timbe timbe papua new guinea"><td>Timbe</td><td><a href="details.php?id=tim" target=_blank>Timbe</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="vasui (tinputz) tinputz papua new guinea"><td>Vasui (Tinputz)</td><td><a href="details.php?id=tpz" target=_blank>Tinputz</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="tuma-irumu tuma-irumu papua new guinea"><td>Tuma-Irumu</td><td><a href="details.php?id=iou" target=_blank>Tuma-Irumu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="tungag tungag papua new guinea"><td>Tungag</td><td><a href="details.php?id=lcm" target=_blank>Tungag</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="uare uare papua new guinea"><td>Uare</td><td><a href="details.php?id=ksj" target=_blank>Uare</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="ubir ubir papua new guinea"><td>Ubir</td><td><a href="details.php?id=ubr" target=_blank>Ubir</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="umanakaina umanakaina papua new guinea"><td>Umanakaina</td><td><a href="details.php?id=gdn" target=_blank>Umanakaina</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="umbu-ungu andelale umbu-ungu papua new guinea"><td>Umbu-Ungu Andelale</td><td><a href="details.php?id=ubu-andelale" target=_blank>Umbu-Ungu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="umbu-ungu kala umbu-ungu papua new guinea"><td>Umbu-Ungu Kala</td><td><a href="details.php?id=ubu-kala" target=_blank>Umbu-Ungu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="umbu-ungu no penge umbu-ungu papua new guinea"><td>Umbu-Ungu No Penge</td><td><a href="details.php?id=ubu-nopenge" target=_blank>Umbu-Ungu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="ura ura papua new guinea"><td>Ura</td><td><a href="details.php?id=uro" target=_blank>Ura</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="urat urat papua new guinea"><td>Urat</td><td><a href="details.php?id=urt" target=_blank>Urat</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="urii uri papua new guinea"><td>Urii</td><td><a href="details.php?id=uvh" target=_blank>Uri</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="urim urim papua new guinea"><td>Urim</td><td><a href="details.php?id=urim" target=_blank>Urim</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="urim urim papua new guinea"><td>Urim</td><td><a href="details.php?id=uri" target=_blank>Urim</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="usan usan papua new guinea"><td>Usan</td><td><a href="details.php?id=wnu" target=_blank>Usan</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="usarufa usarufa papua new guinea"><td>Usarufa</td><td><a href="details.php?id=usa" target=_blank>Usarufa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="pole vitu vitu papua new guinea"><td>Pole Vitu</td><td><a href="details.php?id=wiv" target=_blank>Vitu</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="waffa waffa papua new guinea"><td>Waffa</td><td><a href="details.php?id=waj" target=_blank>Waffa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="wagi wagi papua new guinea"><td>Wagi</td><td><a href="details.php?id=fad" target=_blank>Wagi</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="waima waima papua new guinea"><td>Waima</td><td><a href="details.php?id=rro" target=_blank>Waima</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="wantoat wantoat papua new guinea"><td>Wantoat</td><td><a href="details.php?id=wnc" target=_blank>Wantoat</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="walsa/waris waris papua new guinea"><td>Walsa/Waris</td><td><a href="details.php?id=wrs" target=_blank>Waris</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="feni warwar feni papua new guinea"><td>Feni</td><td><a href="details.php?id=hrw" target=_blank>Warwar Feni</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="waskia waskia papua new guinea"><td>Waskia</td><td><a href="details.php?id=wsk" target=_blank>Waskia</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="wedau wedau papua new guinea"><td>Wedau</td><td><a href="details.php?id=wed" target=_blank>Wedau</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="topura (wedau) wedau papua new guinea"><td>Topura (Wedau)</td><td><a href="details.php?id=wed-topura" target=_blank>Wedau</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="weri weri papua new guinea"><td>Weri</td><td><a href="details.php?id=wer" target=_blank>Weri</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="west kewa west kewa papua new guinea"><td>West Kewa</td><td><a href="details.php?id=kew" target=_blank>West Kewa</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="wipi wipi papua new guinea"><td>Wipi</td><td><a href="details.php?id=gdr" target=_blank>Wipi</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="witu wiru papua new guinea"><td>Witu</td><td><a href="details.php?id=wiu" target=_blank>Wiru</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="ambulas (wosera) wosera-kamu dialect of ambulas papua new guinea"><td>Ambulas (Wosera)</td><td><a href="details.php?id=abt-wosera" target=_blank>Wosera-Kamu dialect of Ambulas</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="wuvalu-aua wuvalu-aua papua new guinea"><td>Wuvalu-Aua</td><td><a href="details.php?id=wuv" target=_blank>Wuvalu-Aua</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="jabem yabem papua new guinea"><td>Jabem</td><td><a href="details.php?id=jae" target=_blank>Yabem</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="yalë yale papua new guinea"><td>Yalë</td><td><a href="details.php?id=nce" target=_blank>Yale</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="yamap yamap papua new guinea"><td>Yamap</td><td><a href="details.php?id=ymp" target=_blank>Yamap</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="yareba yareba papua new guinea"><td>Yareba</td><td><a href="details.php?id=yrb" target=_blank>Yareba</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="yau yau papua new guinea"><td>Yau</td><td><a href="details.php?id=yuw" target=_blank>Yau</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="yaweyuha yaweyuha papua new guinea"><td>Yaweyuha</td><td><a href="details.php?id=yby" target=_blank>Yaweyuha</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="yele rossel yele papua new guinea"><td>Yele Rossel</td><td><a href="details.php?id=yle" target=_blank>Yele</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="yessan-mayo (yamano) yessan-mayo papua new guinea"><td>Yessan-Mayo (Yamano)</td><td><a href="details.php?id=yss-yamano" target=_blank>Yessan-Mayo</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="yawu (yessan-mayo) yessan-mayo papua new guinea"><td>Yawu (Yessan-Mayo)</td><td><a href="details.php?id=yss-yawu" target=_blank>Yessan-Mayo</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="yipma/wagamwa yipma papua new guinea"><td>Yipma/Wagamwa</td><td><a href="details.php?id=byr-w" target=_blank>Yipma</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="yongkom yongkom papua new guinea"><td>Yongkom</td><td><a href="details.php?id=yon" target=_blank>Yongkom</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="yopno yopno papua new guinea"><td>Yopno</td><td><a href="details.php?id=yut" target=_blank>Yopno</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="zia zia papua new guinea"><td>Zia</td><td><a href="details.php?id=zia" target=_blank>Zia</a></td><td>Papua New Guinea</td><td>—</td></tr>
+<tr data-search="arosi arosi solomon islands"><td>Arosi</td><td><a href="details.php?id=aia" target=_blank>Arosi</a></td><td>Solomon Islands</td><td>—</td></tr>
+<tr data-search="baegu baeggu solomon islands"><td>Baegu</td><td><a href="details.php?id=bvd" target=_blank>Baeggu</a></td><td>Solomon Islands</td><td>—</td></tr>
+<tr data-search="bughotu bughotu solomon islands"><td>Bughotu</td><td><a href="details.php?id=bgt" target=_blank>Bughotu</a></td><td>Solomon Islands</td><td>—</td></tr>
+<tr data-search="fataleka fataleka solomon islands"><td>Fataleka</td><td><a href="details.php?id=far" target=_blank>Fataleka</a></td><td>Solomon Islands</td><td>—</td></tr>
+<tr data-search="gela gela solomon islands"><td>Gela</td><td><a href="details.php?id=nlg" target=_blank>Gela</a></td><td>Solomon Islands</td><td>—</td></tr>
+<tr data-search="ghanongga ghanongga solomon islands"><td>Ghanongga</td><td><a href="details.php?id=ghn" target=_blank>Ghanongga</a></td><td>Solomon Islands</td><td>—</td></tr>
+<tr data-search="kwaio kwaio solomon islands"><td>Kwaio</td><td><a href="details.php?id=kwd" target=_blank>Kwaio</a></td><td>Solomon Islands</td><td>—</td></tr>
+<tr data-search="kwara'ae kwara'ae solomon islands"><td>Kwara'ae</td><td><a href="details.php?id=kwf" target=_blank>Kwara'ae</a></td><td>Solomon Islands</td><td>—</td></tr>
+<tr data-search="luqa lungga solomon islands"><td>Luqa</td><td><a href="details.php?id=lga" target=_blank>Lungga</a></td><td>Solomon Islands</td><td>—</td></tr>
+<tr data-search="natqgu natügu solomon islands"><td>Natqgu</td><td><a href="details.php?id=ntu" target=_blank>Natügu</a></td><td>Solomon Islands</td><td>—</td></tr>
+<tr data-search="roviana roviana solomon islands"><td>Roviana</td><td><a href="details.php?id=rug" target=_blank>Roviana</a></td><td>Solomon Islands</td><td>—</td></tr>
+<tr data-search="sa'a sa'a solomon islands"><td>Sa'a</td><td><a href="details.php?id=apb" target=_blank>Sa'a</a></td><td>Solomon Islands</td><td>—</td></tr>
+<tr data-search="wala wala solomon islands"><td>Wala</td><td><a href="details.php?id=lgl" target=_blank>Wala</a></td><td>Solomon Islands</td><td>—</td></tr>
+<tr data-search="tongan tongan tonga"><td>Tongan</td><td><a href="details.php?id=ton" target=_blank>Tongan</a></td><td>Tonga</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engaoi" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engBBE" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=eng-Brenton" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=eng-uk-lxx2012" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engDBY" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engDRA" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engemtv" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engwyc2018" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engwyc2017" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=enggnv" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=eng-kjv2006" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=eng-kjv" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engkjvcpb" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=englee" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engnoy" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engoebcw" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=eng-rv" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engoke" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engojb" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engtnt" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engwebpb" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=eng-webbe" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>English</td><td><a href="details.php?id=engwmbb" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="middle english english united kingdom"><td>Middle English</td><td><a href="details.php?id=engWycliffe" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united kingdom"><td>ENGLISH</td><td><a href="details.php?id=engylt" target=_blank>English</a></td><td>United Kingdom</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=eng-asv" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=engasvbt" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=enge2t" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=englsv" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=eng-glw" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=eng-lxx2012" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=engmsb" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=engnet" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=engourb" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=engoebus" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=engtcent" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=eng-t4t" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=engULB" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=engwebster" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=engwebp" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=eng-web-c" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=eng-web" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=engwebu" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states"><td>English</td><td><a href="details.php?id=engwmb" target=_blank>English</a></td><td>United States</td><td>—</td></tr>
+<tr data-search="english english united states of america"><td>English</td><td><a href="details.php?id=engbsb" target=_blank>English</a></td><td>United States of America</td><td>—</td></tr>
+<tr data-search="english english united states of america"><td>English</td><td><a href="details.php?id=engf35" target=_blank>English</a></td><td>United States of America</td><td>—</td></tr>
+<tr data-search="english english united states of america"><td>English</td><td><a href="details.php?id=engfbv" target=_blank>English</a></td><td>United States of America</td><td>—</td></tr>
+<tr data-search="english english united states of america"><td>English</td><td><a href="details.php?id=engjps" target=_blank>English</a></td><td>United States of America</td><td>—</td></tr>
+<tr data-search="english english united states of america"><td>English</td><td><a href="details.php?id=englxxup" target=_blank>English</a></td><td>United States of America</td><td>—</td></tr>
+<tr data-search="havai ambae, east vanuatu"><td>Havai</td><td><a href="details.php?id=omb" target=_blank>Ambae, East</a></td><td>Vanuatu</td><td>—</td></tr>
+<tr data-search="southeast ambrym ambrym, southeast vanuatu"><td>Southeast Ambrym</td><td><a href="details.php?id=tvk" target=_blank>Ambrym, Southeast</a></td><td>Vanuatu</td><td>—</td></tr>
+<tr data-search="apma apma vanuatu"><td>Apma</td><td><a href="details.php?id=app" target=_blank>Apma</a></td><td>Vanuatu</td><td>—</td></tr>
+<tr data-search="baki baki vanuatu"><td>Baki</td><td><a href="details.php?id=bki" target=_blank>Baki</a></td><td>Vanuatu</td><td>—</td></tr>
+<tr data-search="lewo lewo vanuatu"><td>Lewo</td><td><a href="details.php?id=lww" target=_blank>Lewo</a></td><td>Vanuatu</td><td>—</td></tr>
+<tr data-search="maskelynes maskelynes vanuatu"><td>Maskelynes</td><td><a href="details.php?id=klv" target=_blank>Maskelynes</a></td><td>Vanuatu</td><td>—</td></tr>
+<tr data-search="nəfe nafe vanuatu"><td>Nəfe</td><td><a href="details.php?id=tnk" target=_blank>Nafe</a></td><td>Vanuatu</td><td>—</td></tr>
+<tr data-search="north tanna north tanna vanuatu"><td>North Tanna</td><td><a href="details.php?id=tnn" target=_blank>North Tanna</a></td><td>Vanuatu</td><td>—</td></tr>
+<tr data-search="paama paama vanuatu"><td>Paama</td><td><a href="details.php?id=pma" target=_blank>Paama</a></td><td>Vanuatu</td><td>—</td></tr>
+<tr data-search="southwest tanna southwest tanna vanuatu"><td>Southwest Tanna</td><td><a href="details.php?id=nwi" target=_blank>Southwest Tanna</a></td><td>Vanuatu</td><td>—</td></tr>
+<tr data-search="tangoa tangoa vanuatu"><td>Tangoa</td><td><a href="details.php?id=tgp" target=_blank>Tangoa</a></td><td>Vanuatu</td><td>—</td></tr>
+<tr data-search="uripiv uripiv-wala-rano-atchin vanuatu"><td>Uripiv</td><td><a href="details.php?id=upv" target=_blank>Uripiv-Wala-Rano-Atchin</a></td><td>Vanuatu</td><td>—</td></tr>
+<tr data-search="whitesands whitesands vanuatu"><td>Whitesands</td><td><a href="details.php?id=tnp" target=_blank>Whitesands</a></td><td>Vanuatu</td><td>—</td></tr>    </tbody>
+  </table>
+  <div id="no-results">No translations matched your search.</div>
+</div>
+</section>
+<footer class="footer-dark bg-black padding-slim-top">
+  <div class="footer-top padding-40px-tb border-bottom border-color-white-transparent">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-3 text-center text-md-start sm-margin-20px-bottom">
+          <img src="smallglobe.gif" alt="Pacific Globe" style="width:90px;height:90px;border-radius:50%;">
+        </div>
+        <div class="col-12 col-md-6 text-center sm-margin-20px-bottom">
+          <span class="alt-font font-weight-500 d-inline-block align-middle margin-5px-right text-uppercase text-white">
+            <p>Site copyright © 2009–2025 <a href="https://eBible.org/">eBible.org</a>.<br>
+            <a href="https://eBible.org/privacy.php">Privacy Policy</a> &nbsp;&nbsp;
+            <a href="https://eBible.org/legal.php">Legal Notices</a></p>
+          </span>
+        </div>
+        <div class="col-12 col-md-3"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+<a class="scroll-top-arrow" href="javascript:void(0);"><i class="fa fa-arrow-up"></i></a>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript" src="/js/theme-vendors.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script>
+function filterTable() {
+  var q = document.getElementById("lang-search").value.toLowerCase().trim();
+  var rows = document.querySelectorAll("#trans-body tr");
+  var shown = 0;
+  rows.forEach(function(row) {
+    var match = !q || (row.getAttribute("data-search") || "").indexOf(q) !== -1;
+    row.style.display = match ? "" : "none";
+    if (match) shown++;
+  });
+  var el = document.getElementById("result-count");
+  el.textContent = q ? (shown + " of 460 translations") : "Showing all 460 translations";
+  document.getElementById("no-results").style.display = shown === 0 ? "" : "none";
+}
+</script>
+</body>
+</html>

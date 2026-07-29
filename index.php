@@ -1,5 +1,20 @@
+<?php
+$allLangs = ['en','es','fr','de','pt','ru','zh','ar','hi','ja','ko','id','tr','it','vi','th','nl','pl','uk','bn'];
+$uiLang = 'en';
+if (isset($_GET['lang']) && in_array($_GET['lang'], $allLangs)) {
+    $uiLang = $_GET['lang'];
+} else {
+    $accept = $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '';
+    foreach (explode(',', $accept) as $part) {
+        $tag = strtolower(trim(explode(';', $part)[0]));
+        foreach (['zh','es','hi','ar','pt','bn','ru','ja','fr','de','ko','id','tr','it','vi','th','nl','pl','uk','en'] as $code) {
+            if (str_starts_with($tag, $code)) { $uiLang = $code; break 2; }
+        }
+    }
+}
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= $uiLang ?>">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -589,13 +604,14 @@
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
       <i class="bi bi-list"></i>
     </button>
+    <?php include __DIR__ . '/includes/lang-bar.php'; ?>
     <ul class="nav-links" id="nav-links">
       <li><a href="https://ebible.org/study/">Read Online</a></li>
       <li><a href="https://ebible.org/find/">Find a Translation</a></li>
       <li><a href="https://ebible.org/download.php">Download</a></li>
       <li><a href="https://ebible.org/Bible/">Links</a></li>
       <li><a href="https://ebible.org/about.php">About</a></li>
-      <li><a href="/contact/contact.php" id="contact-nav-link">Contact</a></li>
+      <li><a href="/contact/contact.php?lang=<?= $uiLang ?>" id="contact-nav-link">Contact</a></li>
       <li><a href="https://ebible.org/give.php" class="btn-give">Give</a></li>
     </ul>
   </div>
@@ -694,7 +710,7 @@
       </div>
       <div class="col-6 col-md-3 stat-item">
         <div class="stat-number">Free</div>
-        <div class="stat-label">Always &amp; forever</div>
+        <div class="stat-label">To read &amp; download</div>
       </div>
       <div class="col-6 col-md-3 stat-item">
         <div class="stat-number">1997</div>
@@ -707,11 +723,6 @@
 <!-- FEATURES -->
 <section class="feature-section">
   <div class="wrap">
-    <div class="section-heading">
-      <h2>Everything you need</h2>
-      <p>Whether you want to read, study, download, or share the Scriptures — eBible.org has you covered.</p>
-    </div>
-
     <div class="row g-4">
 
       <div class="col-12 col-sm-6 col-lg-4">
@@ -860,7 +871,11 @@
     'Arabic':'ar','Bengali':'bn','Portuguese':'pt','Russian':'ru',
     'Indonesian':'id','German':'de','Japanese':'ja','Turkish':'tr',
     'Vietnamese':'vi','Korean':'ko','Thai':'th','Dutch':'nl',
-    'Polish':'pl','Ukrainian':'uk','Tetun':'en'
+    'Polish':'pl','Ukrainian':'uk','Tetun':'tet',
+    'Urdu':'ur','Marathi':'mr','Telugu':'te','Tamil':'ta',
+    'Swahili':'sw','Tok Pisin':'tpi','Ilocano':'ilo','Cebuano':'ceb',
+    'Khmer':'km','Hausa':'ha','Yoruba':'yo','Igbo':'ig',
+    'Amharic':'am','Oromo':'om','Somali':'so','Malagasy':'mg'
   };
 
   function updateContactLink(langKey) {
