@@ -345,8 +345,8 @@
     "page_count": 2125,
     "weight_g": null,
     "edition_year": 2025,
-    "cover_image_thumb_url": "https://m.media-amazon.com/images/I/81zKzgfCTNL._SY522_.jpg",
-    "cover_image_large_url": "https://m.media-amazon.com/images/I/81zKzgfCTNL._SY522_.jpg",
+    "cover_image_thumb_url": "https://m.media-amazon.com/images/I/81zKzgfCTNL._SY115_.jpg",
+    "cover_image_large_url": "https://m.media-amazon.com/images/I/81zKzgfCTNL.jpg",
     "notes": "Kindle ebook by Michael Paul Johnson; ASIN B0DJ5J9FLG, no physical ISBN. Edition family unverified -- listing never states a text-as-of date, so Classic vs. Updated can't be confirmed without opening the Kindle sample."
   },
   {
@@ -370,8 +370,8 @@
     "page_count": 788,
     "weight_g": 898,
     "edition_year": 2014,
-    "cover_image_thumb_url": "https://m.media-amazon.com/images/I/41SbLow6uZL._SY522_.jpg",
-    "cover_image_large_url": "https://m.media-amazon.com/images/I/41SbLow6uZL._SY522_.jpg",
+    "cover_image_thumb_url": "https://m.media-amazon.com/images/I/41SbLow6uZL._SY115_.jpg",
+    "cover_image_large_url": "https://m.media-amazon.com/images/I/41SbLow6uZL.jpg",
     "notes": "Published via Village LLC / Pinch imprint; text as of Feb 23, 2014 (pre-2022 Classic text)."
   },
   {
@@ -395,8 +395,8 @@
     "page_count": 3356,
     "weight_g": null,
     "edition_year": 2000,
-    "cover_image_thumb_url": "https://m.media-amazon.com/images/I/916oyLZVCjL._SY522_.jpg",
-    "cover_image_large_url": "https://m.media-amazon.com/images/I/916oyLZVCjL._SY522_.jpg",
+    "cover_image_thumb_url": "https://m.media-amazon.com/images/I/916oyLZVCjL._SY115_.jpg",
+    "cover_image_large_url": "https://m.media-amazon.com/images/I/916oyLZVCjL.jpg",
     "notes": "Kindle edition of the earliest (2000) WEB text, published by Kingdom Konnexion; ASIN B07F7PZGRZ."
   },
   {
@@ -420,7 +420,7 @@
     "page_count": 802,
     "weight_g": 1306,
     "edition_year": 2016,
-    "cover_image_thumb_url": "https://m.media-amazon.com/images/I/61AVDtYUE7L.jpg",
+    "cover_image_thumb_url": "https://m.media-amazon.com/images/I/61AVDtYUE7L._SY115_.jpg",
     "cover_image_large_url": "https://m.media-amazon.com/images/I/61AVDtYUE7L.jpg",
     "notes": "British/International spelling; predates the 2022 update."
   },
@@ -445,7 +445,7 @@
     "page_count": 798,
     "weight_g": 1061,
     "edition_year": 2016,
-    "cover_image_thumb_url": "https://m.media-amazon.com/images/I/51A66HizLEL.jpg",
+    "cover_image_thumb_url": "https://m.media-amazon.com/images/I/51A66HizLEL._SY115_.jpg",
     "cover_image_large_url": "https://m.media-amazon.com/images/I/51A66HizLEL.jpg",
     "notes": "USA spelling; predates the 2022 update."
   },
@@ -470,8 +470,8 @@
     "page_count": 384,
     "weight_g": 735,
     "edition_year": 2003,
-    "cover_image_thumb_url": "https://m.media-amazon.com/images/I/41chh7DDXcL._SY445_SX342_FMwebp_.jpg",
-    "cover_image_large_url": "https://m.media-amazon.com/images/I/41chh7DDXcL._SY445_SX342_FMwebp_.jpg",
+    "cover_image_thumb_url": "https://m.media-amazon.com/images/I/41chh7DDXcL._SY115_.jpg",
+    "cover_image_large_url": "https://m.media-amazon.com/images/I/41chh7DDXcL.jpg",
     "notes": "Earlier/separate edition from the 2022 NT+Psalms&Proverbs (978-1-63656-007-6); Rainbow Missions original imprint."
   },
   {
@@ -495,8 +495,8 @@
     "page_count": 2974,
     "weight_g": null,
     "edition_year": 2022,
-    "cover_image_thumb_url": "https://m.media-amazon.com/images/I/71axv3FmvwL._SY522_.jpg",
-    "cover_image_large_url": "https://m.media-amazon.com/images/I/71axv3FmvwL._SY522_.jpg",
+    "cover_image_thumb_url": "https://m.media-amazon.com/images/I/71axv3FmvwL._SY115_.jpg",
+    "cover_image_large_url": "https://m.media-amazon.com/images/I/71axv3FmvwL.jpg",
     "notes": "Separate translation by the same author (Messianic Jewish-friendly terminology), derived from WEB; ASIN B00UQH7T24."
   },
   {
@@ -545,8 +545,8 @@
     "page_count": 350,
     "weight_g": 789,
     "edition_year": 2020,
-    "cover_image_thumb_url": "https://images-na.ssl-images-amazon.com/images/I/61dJSV8nvFL._AC_UL232_SR232,232_.jpg",
-    "cover_image_large_url": "https://images-na.ssl-images-amazon.com/images/I/61dJSV8nvFL._AC_UL232_SR232,232_.jpg",
+    "cover_image_thumb_url": "https://images-na.ssl-images-amazon.com/images/I/61dJSV8nvFL._SY115_.jpg",
+    "cover_image_large_url": "https://images-na.ssl-images-amazon.com/images/I/61dJSV8nvFL.jpg",
     "notes": "By Robert M. Sutherland (not Michael Paul Johnson); publisher Trafford Publishing; uses WEB text. Not a full Bible. Kindle edition also available at $3.99."
   }
 ]

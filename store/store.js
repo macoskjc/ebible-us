@@ -1,52 +1,7 @@
 /**
- * eBible.org Store — client-side data load, filter, and render.
- * Static JSON (editions.json + offers.json), no backend. See
- * eBible_Store_Rebuild_Plan.md Section 0/3 for why: this deploys
- * unchanged to GitHub Pages and any other static host.
+ * eBible.org Store — listing page: filter UI + card grid.
+ * Shared data/formatting/offer logic lives in common.js (loaded first).
  */
-
-const EXTENT_LABELS = {
-  'OT+NT+DC': 'Old & New Testaments + Deuterocanon',
-  'OT+NT': 'Old & New Testaments',
-  'NT': 'New Testament only',
-  'NT+Partial-OT': 'New Testament + partial Old Testament',
-  'DC-Only': 'Deuterocanon / Apocrypha only',
-  'Selections (Words of Jesus only)': "Selections — words of Jesus only",
-  'Gospels only (Harmony)': 'Gospels only (harmony)',
-};
-
-function mmToImperial(heightMm, widthMm, thicknessMm) {
-  if (heightMm == null || widthMm == null) return null;
-  const hIn = (heightMm / 25.4).toFixed(1);
-  const wIn = (widthMm / 25.4).toFixed(1);
-  let out = `${hIn} × ${wIn} in`;
-  if (thicknessMm != null) {
-    out += ` × ${(thicknessMm / 25.4).toFixed(2)} in`;
-  }
-  return out;
-}
-
-function gToOz(g) {
-  if (g == null) return null;
-  return (g / 28.3495).toFixed(1);
-}
-
-let EDITIONS = [];
-let OFFERS = [];
-let OFFERS_BY_EDITION = {};
-
-async function loadData() {
-  const [editionsRes, offersRes] = await Promise.all([
-    fetch('data/editions.json'),
-    fetch('data/offers.json'),
-  ]);
-  EDITIONS = await editionsRes.json();
-  OFFERS = await offersRes.json();
-  OFFERS_BY_EDITION = {};
-  for (const o of OFFERS) {
-    (OFFERS_BY_EDITION[o.edition_id] ??= []).push(o);
-  }
-}
 
 function populateSelect(id, values, labelFn) {
   const select = document.getElementById(id);
@@ -69,8 +24,8 @@ function initFilterOptions() {
     [...new Set(EDITIONS.map(e => e.print_size_category).filter(Boolean))].sort());
   populateSelect('f-binding',
     [...new Set(EDITIONS.map(e => e.binding_type).filter(Boolean))].sort());
-  populateSelect('f-retailer',
-    [...new Set(OFFERS.map(o => o.retailer))].sort());
+  const sellableRetailers = OFFERS.filter(o => !HIDDEN_RETAILERS.has(o.retailer)).map(o => o.retailer);
+  populateSelect('f-retailer', [...new Set(sellableRetailers)].sort());
 }
 
 function currentFilters() {
@@ -89,13 +44,26 @@ function currentFilters() {
   };
 }
 
-function editionOffers(edition, f) {
-  let offers = OFFERS_BY_EDITION[edition.sku_id] || [];
+function applyOfferFilters(offers, f) {
   if (f.retailer) offers = offers.filter(o => o.retailer === f.retailer);
   if (f.inStockOnly) offers = offers.filter(o => o.in_stock);
   if (f.priceMin != null) offers = offers.filter(o => o.price_usd == null || o.price_usd >= f.priceMin);
   if (f.priceMax != null) offers = offers.filter(o => o.price_usd == null || o.price_usd <= f.priceMax);
   return offers;
+}
+
+// Whether an edition qualifies under retailer/in-stock/price filters is
+// checked against ALL of its offers, including the hidden ones (an
+// edition that's genuinely in stock -- just only through a retailer we
+// don't link to here -- shouldn't vanish from the catalog entirely).
+// What's actually rendered as buy buttons is the separate, narrower
+// customer-visible set (see displayOffers below).
+function qualifyingOffers(edition, f) {
+  return applyOfferFilters(OFFERS_BY_EDITION[edition.sku_id] || [], f);
+}
+
+function displayOffers(edition, f) {
+  return applyOfferFilters(sellableOffers(edition.sku_id), f);
 }
 
 function matches(edition, f) {
@@ -109,54 +77,41 @@ function matches(edition, f) {
   if (f.binding && edition.binding_type !== f.binding) return false;
   if (f.dcOnly && !edition.includes_dc) return false;
   if (f.colorOnly && edition.color_interior !== 'Color') return false;
-  const offers = editionOffers(edition, f);
+  const offers = qualifyingOffers(edition, f);
   if ((f.retailer || f.inStockOnly || f.priceMin != null || f.priceMax != null) && offers.length === 0) return false;
   return true;
 }
 
-function renderCard(edition, offers) {
-  const specs = [];
-  const dims = mmToImperial(edition.trim_height_mm, edition.trim_width_mm, edition.thickness_mm);
-  if (dims) {
-    const mmDims = `${edition.trim_height_mm} × ${edition.trim_width_mm}${edition.thickness_mm != null ? ' × ' + edition.thickness_mm : ''} mm`;
-    specs.push(`${dims} <span class="mm">(${mmDims})</span>`);
-  }
-  if (edition.weight_g != null) {
-    specs.push(`${gToOz(edition.weight_g)} oz <span class="mm">(${edition.weight_g} g)</span>`);
-  }
-  if (edition.page_count) specs.push(`${edition.page_count} pages`);
-  if (edition.font_size_pt) specs.push(`${edition.font_size_pt}pt type`);
-
-  const badges = [];
-  badges.push(`<span class="badge badge-extent">${EXTENT_LABELS[edition.extent] || edition.extent}</span>`);
-  if (edition.print_size_category) badges.push(`<span class="badge badge-print">${edition.print_size_category}</span>`);
-  if (edition.binding_type && edition.binding_type !== 'Unknown') {
-    badges.push(`<span class="badge badge-binding">${edition.binding_type}</span>`);
-  }
-
+function renderCard(edition, offers, qualifyingOffers) {
   const imgHtml = edition.cover_image_thumb_url
     ? `<img src="${edition.cover_image_thumb_url}" alt="${edition.title} cover" onerror="this.closest('.card-img').innerHTML='<div class=\\'no-cover\\'>Cover image<br>not available</div>'">`
     : `<div class="no-cover">Cover image<br>not available</div>`;
+  const detailHref = `edition.html?sku=${encodeURIComponent(edition.sku_id)}`;
+  // If it qualifies for the filters at all but has nothing to show as a
+  // button, that's because its only channel right now is a retailer we
+  // don't link to (see common.js HIDDEN_RETAILERS) -- say so, rather than
+  // implying there's no way to buy it at all.
+  const emptyMessage = qualifyingOffers.length > 0
+    ? 'See edition page for purchase details'
+    : 'No retailer matches your filters';
 
-  const offersHtml = offers.length
-    ? offers.map(o => `
-        <a class="btn-buy${o.in_stock ? '' : ' out-of-stock'}" href="${o.purchase_url}" target="_blank" rel="noopener">
-          <span>Buy at ${o.retailer}</span>
-          ${o.price_usd != null ? `<span class="price">$${o.price_usd.toFixed(2)}</span>` : ''}
-        </a>`).join('')
-    : `<span style="font-size:.78rem;color:#999;">No retailer matches your filters</span>`;
-
+  // The buy buttons are real outbound links, so they can't sit inside the
+  // card's own link to the detail page (nested <a> is invalid HTML and
+  // browsers handle the click ambiguously) -- the detail link wraps only
+  // the image/title/specs; the buy buttons are a separate sibling.
   return `
     <div class="card">
-      <div class="card-img">${imgHtml}</div>
-      <div class="card-body">
-        <div class="card-title">${edition.title}</div>
-        <div class="card-family">${edition.edition_family}</div>
-        <div class="badges">${badges.join('')}</div>
-        <div class="card-specs">${specs.join('<br>')}</div>
-        ${edition.isbn13 ? `<div class="card-isbn">ISBN ${edition.isbn13}</div>` : `<div class="card-isbn">No ISBN (digital-only)</div>`}
-        <div class="card-links">${offersHtml}</div>
-      </div>
+      <a class="card-link" href="${detailHref}">
+        <div class="card-img">${imgHtml}</div>
+        <div class="card-info">
+          <div class="card-title">${edition.title}</div>
+          <div class="card-family">${edition.edition_family}</div>
+          <div class="badges">${badgesFor(edition).join('')}</div>
+          <div class="card-specs">${specLines(edition).join('<br>')}</div>
+          ${edition.isbn13 ? `<div class="card-isbn">ISBN ${edition.isbn13}</div>` : `<div class="card-isbn">No ISBN (digital-only)</div>`}
+        </div>
+      </a>
+      <div class="card-links">${buyButtonsHtml(offers, emptyMessage)}</div>
     </div>`;
 }
 
@@ -176,7 +131,7 @@ function render() {
   }
   grid.style.display = 'grid';
   empty.style.display = 'none';
-  grid.innerHTML = filtered.map(e => renderCard(e, editionOffers(e, f))).join('');
+  grid.innerHTML = filtered.map(e => renderCard(e, displayOffers(e, f), qualifyingOffers(e, f))).join('');
 }
 
 function resetFilters() {

@@ -162,7 +162,8 @@
     font-family: 'Lora', serif; font-size: .82rem; color: var(--muted);
     padding: 1rem; font-style: italic;
   }
-  .card-body { padding: 1rem 1.1rem 1.1rem; flex: 1; display: flex; flex-direction: column; }
+  .card-link { color: inherit; text-decoration: none; display: flex; flex-direction: column; flex: 1; }
+  .card-info { padding: 1rem 1.1rem .3rem; flex: 1; display: flex; flex-direction: column; }
   .card-title { font-family: 'Lora', serif; font-weight: 600; font-size: 1rem; margin: 0 0 .3rem; line-height: 1.3; }
   .card-family { font-size: .82rem; color: var(--muted); margin: 0 0 .6rem; }
   .badges { display: flex; flex-wrap: wrap; gap: .3rem; margin-bottom: .7rem; }
@@ -176,7 +177,7 @@
   .card-specs { font-size: .78rem; color: var(--muted); margin: 0 0 .7rem; line-height: 1.5; }
   .card-specs .mm { color: #999; }
   .card-isbn { font-size: .72rem; color: #999; font-family: ui-monospace, monospace; margin-bottom: .8rem; }
-  .card-links { margin-top: auto; display: flex; flex-direction: column; gap: .4rem; }
+  .card-links { padding: 0 1.1rem 1.1rem; margin-top: auto; display: flex; flex-direction: column; gap: .4rem; }
   .btn-buy {
     display: flex; justify-content: space-between; align-items: center; gap: .5rem;
     padding: .5rem .7rem; background: var(--navy); color: #fff; text-decoration: none;
@@ -228,7 +229,7 @@
 
 <header class="store-header">
   <h1>Buy a Printed Bible</h1>
-  <p>Printed and Kindle editions of the World English Bible and related eBible.org texts, from Amazon, Broken Yoke Publishing, and shop.eBible.org.</p>
+  <p>Printed and Kindle editions of the World English Bible and related eBible.org texts.</p>
 </header>
 
 <form class="filters" id="filters" onsubmit="return false;">
@@ -296,6 +297,7 @@
   <a href="https://ebible.org/privacy.php">Privacy Policy</a>
 </footer>
 
+<script src="common.js"></script>
 <script src="store.js"></script>
 </body>
 </html>
