@@ -608,6 +608,7 @@ if (isset($_GET['lang']) && in_array($_GET['lang'], $allLangs)) {
     <ul class="nav-links" id="nav-links">
       <li><a href="https://ebible.org/study/">Read Online</a></li>
       <li><a href="https://ebible.org/find/">Find a Translation</a></li>
+      <li><a href="/store/">Store</a></li>
       <li><a href="https://ebible.org/download.php">Download</a></li>
       <li><a href="https://ebible.org/Bible/">Links</a></li>
       <li><a href="https://ebible.org/about.php">About</a></li>
