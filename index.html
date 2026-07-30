@@ -199,45 +199,60 @@
       text-transform: uppercase;
       letter-spacing: .08em;
     }
-    .lang-search-wrap {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+    .lang-combobox {
+      position: relative;
     }
-    .lang-search-wrap select {
-      flex: 1;
-      min-width: 0;
+    .lang-input {
+      width: 100%;
       padding: 13px 16px;
       border: 2px solid #dde3ea;
       border-radius: 10px;
       font-size: 1rem;
       color: var(--text);
       background: #fff;
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%236b7a8d' d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 14px center;
-      padding-right: 40px;
       transition: border-color .18s;
-      cursor: pointer;
     }
-    .lang-search-wrap select:focus {
+    .lang-input:focus {
       outline: none;
       border-color: var(--navy);
     }
-    .lang-search-wrap button {
-      background: var(--navy);
-      color: #fff;
-      border: none;
+    .lang-listbox {
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      right: 0;
+      background: #fff;
+      border: 1px solid #dde3ea;
       border-radius: 10px;
-      padding: 13px 22px;
-      font-size: .95rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background .18s;
-      white-space: nowrap;
+      box-shadow: 0 10px 32px rgba(0,0,0,.16);
+      max-height: 280px;
+      overflow-y: auto;
+      list-style: none;
+      margin: 0;
+      padding: 6px;
+      z-index: 10;
+      text-align: left;
     }
-    .lang-search-wrap button:hover { background: var(--navy-dark); }
+    .lang-listbox[hidden] { display: none; }
+    .lang-listbox li {
+      padding: 10px 12px;
+      border-radius: 7px;
+      cursor: pointer;
+      font-size: .95rem;
+      color: var(--text);
+    }
+    .lang-listbox li:hover,
+    .lang-listbox li.active {
+      background: var(--cream);
+      color: var(--navy-dark);
+    }
+    .lang-listbox li.no-match {
+      color: var(--muted);
+      cursor: default;
+      font-size: .88rem;
+    }
+    .lang-listbox li.no-match a { color: var(--navy); }
+    .lang-listbox li.no-match:hover { background: none; }
     .finder-note {
       font-size: .8rem;
       color: var(--muted);
@@ -609,62 +624,18 @@
   <div class="hero-content">
     <div class="ebible-logo ebible-logo-hero" role="img" aria-label="eBible.org logo"></div>
     <h1>The Holy Bible,<br><em>in your language.</em></h1>
-    <p class="subtitle">Free Bible translations in hundreds of languages — to read online, download, and share without barriers.</p>
+    <p class="subtitle">Free Bible translations in hundreds of languages — read online, download, and share without barriers.</p>
 
     <!-- Language Finder -->
     <div class="finder-card">
       <h2><i class="bi bi-translate" style="margin-right:6px;"></i>Find your language</h2>
-      <div class="lang-search-wrap">
-        <select id="lang-select" aria-label="Select your language">
-          <option value="">— Choose a language —</option>
-          <optgroup label="Most widely spoken">
-            <option value="show" data-lang="English">English</option>
-            <option value="show" data-lang="Chinese">中文 — Chinese (Mandarin)</option>
-            <option value="show" data-lang="Hindi">हिन्दी — Hindi</option>
-            <option value="show" data-lang="Spanish">Español — Spanish</option>
-            <option value="show" data-lang="French">Français — French</option>
-            <option value="show" data-lang="Arabic">العربية — Arabic</option>
-            <option value="show" data-lang="Bengali">বাংলা — Bengali</option>
-            <option value="show" data-lang="Portuguese">Português — Portuguese</option>
-            <option value="show" data-lang="Russian">Русский — Russian</option>
-            <option value="show" data-lang="Urdu">اردو — Urdu</option>
-            <option value="show" data-lang="Indonesian">Bahasa Indonesia — Indonesian</option>
-            <option value="show" data-lang="German">Deutsch — German</option>
-            <option value="show" data-lang="Japanese">日本語 — Japanese</option>
-            <option value="show" data-lang="Marathi">मराठी — Marathi</option>
-            <option value="show" data-lang="Telugu">తెలుగు — Telugu</option>
-            <option value="show" data-lang="Turkish">Türkçe — Turkish</option>
-            <option value="show" data-lang="Tamil">தமிழ் — Tamil</option>
-            <option value="show" data-lang="Vietnamese">Tiếng Việt — Vietnamese</option>
-            <option value="show" data-lang="Korean">한국어 — Korean</option>
-            <option value="show" data-lang="Swahili">Kiswahili — Swahili</option>
-          </optgroup>
-          <optgroup label="Pacific &amp; Southeast Asia">
-            <option value="show" data-lang="Tetun">Tetun — Timor-Leste</option>
-            <option value="show" data-lang="Tok Pisin">Tok Pisin — Papua New Guinea</option>
-            <option value="show" data-lang="Ilocano">Ilocano — Philippines</option>
-            <option value="show" data-lang="Cebuano">Cebuano — Philippines</option>
-            <option value="show" data-lang="Thai">ภาษาไทย — Thai</option>
-            <option value="show" data-lang="Khmer">ភាសាខ្មែរ — Khmer</option>
-          </optgroup>
-          <optgroup label="Africa">
-            <option value="show" data-lang="Hausa">Hausa</option>
-            <option value="show" data-lang="Yoruba">Yoruba</option>
-            <option value="show" data-lang="Igbo">Igbo</option>
-            <option value="show" data-lang="Amharic">አማርኛ — Amharic</option>
-            <option value="show" data-lang="Oromo">Afaan Oromoo — Oromo</option>
-            <option value="show" data-lang="Somali">Soomaali — Somali</option>
-            <option value="show" data-lang="Malagasy">Malagasy</option>
-          </optgroup>
-          <optgroup label="Browse all languages">
-            <option value="https://ebible.org/find/">All languages &amp; translations →</option>
-          </optgroup>
-        </select>
-        <button id="go-btn" onclick="goToLang()">
-          <i class="bi bi-arrow-right"></i> Go
-        </button>
+      <div class="lang-combobox" id="lang-combobox">
+        <input type="text" id="lang-input" class="lang-input" placeholder="Type a language name…"
+               role="combobox" aria-expanded="false" aria-autocomplete="list" aria-controls="lang-listbox"
+               autocomplete="off">
+        <ul class="lang-listbox" id="lang-listbox" role="listbox" hidden></ul>
       </div>
-      <p class="finder-note">Over 1,600 translations in 1,000+ languages. Can't find yours? <a href="https://ebible.org/find/">Browse all translations.</a></p>
+      <p class="finder-note">Can't find your language? <a href="https://ebible.org/find/">Browse all translations.</a></p>
     </div>
   </div>
 </section>
@@ -686,11 +657,11 @@
   <div class="wrap">
     <div class="row g-0">
       <div class="col-6 col-md-3 stat-item">
-        <div class="stat-number">1,600+</div>
+        <div class="stat-number" id="stat-translations">1,541</div>
         <div class="stat-label">Translations</div>
       </div>
       <div class="col-6 col-md-3 stat-item">
-        <div class="stat-number">1,000+</div>
+        <div class="stat-number" id="stat-languages">1,238</div>
         <div class="stat-label">Languages</div>
       </div>
       <div class="col-6 col-md-3 stat-item">
@@ -737,7 +708,7 @@
           <div class="card-body-inner">
             <div class="feature-icon"><i class="bi bi-search"></i></div>
             <h3>Find a Translation</h3>
-            <p>Browse over 1,600 Bible translations from around the world, organized by language and territory.</p>
+            <p>Browse Bible translations from around the world, organized by language and territory.</p>
             <span class="card-link">Search translations <i class="bi bi-arrow-right"></i></span>
           </div>
         </a>
@@ -765,7 +736,7 @@
           <div class="card-body-inner">
             <div class="feature-icon"><i class="bi bi-book"></i></div>
             <h3>World English Bible</h3>
-            <p>A freely redistributable, modern-English Bible translation — no copyright restrictions, free to share and use.</p>
+            <p>A modern-English Bible translation, free to share and use without restriction.</p>
             <span class="card-link">Read the WEB <i class="bi bi-arrow-right"></i></span>
           </div>
         </a>
@@ -819,7 +790,7 @@
         <div class="ebible-logo ebible-logo-foot" role="img" aria-label="eBible.org logo"></div>
         <span>eBible.org</span>
       </div>
-      <div>A ministry of Rainbow Missions, Inc.</div>
+      <div>A ministry of World Outreach Ministries.</div>
     </div>
     <ul class="footer-links">
       <li><a href="https://ebible.org/study/">Read</a></li>
@@ -870,21 +841,131 @@
     if (link) link.href = '/contact/contact.php?lang=' + code;
   }
 
-  function goToLang() {
-    const sel = document.getElementById('lang-select');
-    const opt = sel.options[sel.selectedIndex];
-    if (!sel.value) { sel.focus(); return; }
-    // "All languages" option navigates away; language options show inline results
-    if (sel.value !== 'show') { window.location.href = sel.value; return; }
-    const langKey = opt.dataset.lang;
-    updateContactLink(langKey);
-    const translations = translationData[langKey] || [];
-    showResults(langKey, translations);
+  // ── Language finder (searchable combobox) ───────────────
+  const langLabels = {
+    'English': 'English',
+    'Chinese': '中文 — Chinese (Mandarin)',
+    'Hindi': 'हिन्दी — Hindi',
+    'Spanish': 'Español — Spanish',
+    'French': 'Français — French',
+    'Arabic': 'العربية — Arabic',
+    'Bengali': 'বাংলা — Bengali',
+    'Portuguese': 'Português — Portuguese',
+    'Russian': 'Русский — Russian',
+    'Urdu': 'اردو — Urdu',
+    'Indonesian': 'Bahasa Indonesia — Indonesian',
+    'German': 'Deutsch — German',
+    'Japanese': '日本語 — Japanese',
+    'Marathi': 'मराठी — Marathi',
+    'Telugu': 'తెలుగు — Telugu',
+    'Turkish': 'Türkçe — Turkish',
+    'Tamil': 'தமிழ் — Tamil',
+    'Vietnamese': 'Tiếng Việt — Vietnamese',
+    'Korean': '한국어 — Korean',
+    'Swahili': 'Kiswahili — Swahili',
+    'Tetun': 'Tetun — Timor-Leste',
+    'Tok Pisin': 'Tok Pisin — Papua New Guinea',
+    'Ilocano': 'Ilocano — Philippines',
+    'Cebuano': 'Cebuano — Philippines',
+    'Thai': 'ภาษาไทย — Thai',
+    'Khmer': 'ភាសាខ្មែរ — Khmer',
+    'Hausa': 'Hausa',
+    'Yoruba': 'Yoruba',
+    'Igbo': 'Igbo',
+    'Amharic': 'አማርኛ — Amharic',
+    'Oromo': 'Afaan Oromoo — Oromo',
+    'Somali': 'Soomaali — Somali',
+    'Malagasy': 'Malagasy',
+  };
+  const langKeys = Object.keys(langLabels).sort((a, b) => a.localeCompare(b));
+
+  const langInput   = document.getElementById('lang-input');
+  const langListbox = document.getElementById('lang-listbox');
+  let activeIndex = -1;
+  let currentMatches = [];
+
+  function renderMatches(query) {
+    const q = query.trim().toLowerCase();
+    currentMatches = q
+      ? langKeys.filter(key => key.toLowerCase().includes(q) || langLabels[key].toLowerCase().includes(q))
+      : langKeys;
+    activeIndex = -1;
+
+    if (currentMatches.length === 0) {
+      langListbox.innerHTML = '<li class="no-match">No match — try <a href="https://ebible.org/find/">browsing all translations</a>.</li>';
+    } else {
+      langListbox.innerHTML = currentMatches.map((key, i) =>
+        `<li role="option" id="lang-opt-${i}" data-key="${key}">${langLabels[key]}</li>`
+      ).join('');
+    }
+    langListbox.hidden = false;
+    langInput.setAttribute('aria-expanded', 'true');
   }
 
-  document.getElementById('lang-select').addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') goToLang();
+  function closeListbox() {
+    langListbox.hidden = true;
+    langInput.setAttribute('aria-expanded', 'false');
+  }
+
+  function selectLanguage(key) {
+    langInput.value = langLabels[key] || key;
+    closeListbox();
+    updateContactLink(key);
+    showResults(key, translationData[key] || []);
+  }
+
+  function updateActive(items) {
+    items.forEach((li, i) => li.classList.toggle('active', i === activeIndex));
+    if (items[activeIndex]) items[activeIndex].scrollIntoView({ block: 'nearest' });
+  }
+
+  langInput.addEventListener('focus', () => renderMatches(langInput.value));
+  langInput.addEventListener('input', () => renderMatches(langInput.value));
+
+  langInput.addEventListener('keydown', function (e) {
+    if (langListbox.hidden && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+      renderMatches(langInput.value);
+      return;
+    }
+    const items = langListbox.querySelectorAll('li[data-key]');
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      activeIndex = Math.min(activeIndex + 1, items.length - 1);
+      updateActive(items);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      activeIndex = Math.max(activeIndex - 1, 0);
+      updateActive(items);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (activeIndex >= 0 && currentMatches[activeIndex]) {
+        selectLanguage(currentMatches[activeIndex]);
+      } else if (currentMatches.length === 1) {
+        selectLanguage(currentMatches[0]);
+      }
+    } else if (e.key === 'Escape') {
+      closeListbox();
+    }
   });
+
+  langListbox.addEventListener('click', function (e) {
+    const li = e.target.closest('li[data-key]');
+    if (li) selectLanguage(li.dataset.key);
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!document.getElementById('lang-combobox').contains(e.target)) closeListbox();
+  });
+
+  // ── Live translation/language counts (falls back to the static
+  // numbers already in the page if jed.ebible.us is unreachable) ──
+  fetch('https://jed.ebible.us/stats.php')
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(data => {
+      if (data.translations) document.getElementById('stat-translations').textContent = data.translations.toLocaleString();
+      if (data.languages)    document.getElementById('stat-languages').textContent    = data.languages.toLocaleString();
+    })
+    .catch(() => { /* keep static fallback */ });
 
   // ── Render results ──────────────────────────────────────
   function showResults(langKey, translations) {
