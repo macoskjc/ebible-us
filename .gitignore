@@ -1,3 +1,6 @@
 includes/db-config.php
 includes/db-config-sofia.php
 includes/db-config-store.php
+# Working copy of the live jed.ebible.us homepage -- no longer published
+# via GitHub Pages, kept locally only for editing.
+homepage/
