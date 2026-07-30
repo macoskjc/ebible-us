@@ -53,8 +53,8 @@ let OFFERS_BY_EDITION = {};
 
 async function loadData() {
   const [editionsRes, offersRes] = await Promise.all([
-    fetch('data/editions.json'),
-    fetch('data/offers.json'),
+    fetch('editions.php'),
+    fetch('offers.php'),
   ]);
   EDITIONS = await editionsRes.json();
   OFFERS = await offersRes.json();

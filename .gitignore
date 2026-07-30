@@ -1,2 +1,3 @@
 includes/db-config.php
 includes/db-config-sofia.php
+includes/db-config-store.php
