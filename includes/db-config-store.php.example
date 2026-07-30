@@ -1,8 +1,0 @@
-<?php
-// Copy this file to db-config-store.php (same directory) and fill in real values.
-// db-config-store.php is gitignored -- never commit real credentials.
-// Read-only credentials for the ebible_store database (see the
-// ebible_store_reader MySQL user).
-$storeHost = 'localhost';
-$storeUser = 'CHANGE_ME';
-$storePw   = 'CHANGE_ME';

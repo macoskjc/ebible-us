@@ -1,7 +1,0 @@
-<?php
-// Copy this file to db-config-sofia.php (same directory) and fill in real values.
-// db-config-sofia.php is gitignored -- never commit real credentials.
-// Read-only credentials for the sofia database (see the sofia_reader MySQL user).
-$sofiaHost = 'localhost';
-$sofiaUser = 'CHANGE_ME';
-$sofiaPw   = 'CHANGE_ME';
